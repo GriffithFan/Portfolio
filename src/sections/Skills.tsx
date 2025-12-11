@@ -11,7 +11,7 @@ const Skills = () => {
     ai: 'IA & Automatización',
   }
 
-  // Helper para obtener el componente de icono correcto
+  // Dynamically resolve icon component from library with fallback
   const getIcon = (iconName: string): IconType => {
     if (iconName.startsWith('Si')) {
       return (SimpleIcons as any)[iconName] || SimpleIcons.SiReact

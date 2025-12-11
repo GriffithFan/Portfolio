@@ -13,8 +13,8 @@ const Contact = () => {
     e.preventDefault()
     setStatus('sending')
 
-    // Aquí puedes integrar un servicio como EmailJS, Formspree, o tu propio backend
-    // Por ahora, simulamos el envío
+    // TODO: Integrate email service (EmailJS, Formspree, or custom backend)
+    // Currently simulating submission for demonstration
     setTimeout(() => {
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
