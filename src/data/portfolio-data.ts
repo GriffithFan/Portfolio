@@ -67,11 +67,11 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Portal Meraki · Sistema de Gestión",
-    description: "Sistema integral de gestión empresarial con arquitectura frontend/backend. Manejo de dispositivos, autenticación segura, PWA con caché optimizado y dashboards interactivos en producción.",
+    description: "Sistema integral de gestión empresarial con arquitectura frontend/backend. Proyecto vendido y desplegado en VPS. Manejo de dispositivos, autenticación segura, PWA con caché optimizado y dashboards interactivos en producción.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
     tags: ["JavaScript", "Node.js", "React", "PWA", "Express"],
     github: "https://github.com/GriffithFan/portal_meraki_final",
-    demo: "https://portal-meraki.vercel.app"
+    demo: "https://portalmeraki.info"
   },
   {
     id: 3,
@@ -80,6 +80,14 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
     tags: ["Python", "JavaScript", "API", "Data Analysis", "Gaming"],
     github: "https://github.com/GriffithFan/estadisticas_lol"
+  },
+  {
+    id: 4,
+    title: "Meraki Automation Suite · Network Tools",
+    description: "Suite completa de scripts Python para automatización de redes Cisco Meraki. Gestión de dispositivos, análisis de velocidad WAN, recolección de relevamientos, consultas SNMP, web scraping de dashboards y reportes automatizados en Excel. Herramientas CLI portables.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    tags: ["Python", "Automation", "Network", "CLI", "Excel", "SNMP"],
+    github: "https://github.com/GriffithFan"
   },
 ]
 
