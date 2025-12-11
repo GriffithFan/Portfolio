@@ -39,7 +39,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-gray-400 text-sm flex items-center space-x-2">
-            <span>© {currentYear} {personalInfo.name}.</span>
+            <span>© {currentYear} Griffith_Dev.</span>
             <span className="flex items-center">
               Hecho con <FiHeart className="mx-1 text-red-500" size={16} /> y React
             </span>

@@ -57,7 +57,7 @@ const Contact = () => {
 
             <div className="space-y-4">
               <a
-                href="mailto:tu.email@ejemplo.com"
+                href="mailto:uisesl380@gmail.com"
                 className="flex items-center space-x-4 glass-effect p-4 rounded-lg hover:bg-white/10 transition-all duration-300 group"
               >
                 <div className="text-primary-400 group-hover:scale-110 transition-transform">
@@ -65,12 +65,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Email</div>
-                  <div className="text-white">tu.email@ejemplo.com</div>
+                  <div className="text-white">uisesl380@gmail.com</div>
                 </div>
               </a>
 
               <a
-                href="https://github.com/tuusuario"
+                href="https://github.com/GriffithFan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 glass-effect p-4 rounded-lg hover:bg-white/10 transition-all duration-300 group"
@@ -80,7 +80,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">GitHub</div>
-                  <div className="text-white">@tuusuario</div>
+                  <div className="text-white">@GriffithFan</div>
                 </div>
               </a>
             </div>
