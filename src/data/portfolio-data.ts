@@ -15,12 +15,12 @@ export interface Skill {
 }
 
 export const personalInfo = {
-  name: "Tu Nombre",
+  name: "Ulises Lazarte",
   role: "Full Stack Developer · AI Integration",
   bio: "Desarrollador Full Stack con enfoque en arquitecturas modernas y soluciones impulsadas por IA. Experiencia construyendo aplicaciones escalables con React, Node.js y Python. Especializado en automatización, CLI tools y optimización de workflows de desarrollo.",
-  email: "tu.email@ejemplo.com",
-  github: "https://github.com/tuusuario",
-  linkedin: "https://linkedin.com/in/tuusuario",
+  email: "uisesl380@gmail.com",
+  github: "https://github.com/GriffithFan",
+  linkedin: "https://linkedin.com/in/ulises-lazarte",
 }
 
 export const skills: Skill[] = [
@@ -57,29 +57,29 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "SaaS Platform · Full Stack",
-    description: "Aplicación web escalable con arquitectura cliente-servidor. Autenticación JWT, API RESTful, migraciones de base de datos con Prisma y UI responsiva con Tailwind CSS.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
-    github: "#",
-    demo: "#"
+    title: "Tienda de Ropa Online · E-commerce",
+    description: "Plataforma e-commerce completa con TypeScript. Sistema de gestión de inventario, carrito de compras, procesamiento de pagos y panel administrativo. Desplegada en Vercel con CI/CD automatizado.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    tags: ["TypeScript", "React", "Next.js", "Vercel", "E-commerce"],
+    github: "https://github.com/GriffithFan/tienda_de_ropa_online",
+    demo: "https://tienda-de-ropa-online.vercel.app"
   },
   {
     id: 2,
-    title: "Analytics Dashboard · Data Viz",
-    description: "Dashboard de visualización de datos en tiempo real con ETL pipeline. Procesamiento de datasets complejos usando Pandas, análisis estadístico y gráficos interactivos.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    tags: ["Python", "Pandas", "React", "Data Analysis", "API"],
-    github: "#",
-    demo: "#"
+    title: "Portal Meraki · Sistema de Gestión",
+    description: "Sistema integral de gestión empresarial con arquitectura frontend/backend. Manejo de dispositivos, autenticación segura, PWA con caché optimizado y dashboards interactivos en producción.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    tags: ["JavaScript", "Node.js", "React", "PWA", "Express"],
+    github: "https://github.com/GriffithFan/portal_meraki_final",
+    demo: "https://portal-meraki.vercel.app"
   },
   {
     id: 3,
-    title: "Automation Suite · CLI Tools",
-    description: "Suite de herramientas CLI para automatización de workflows. Web scraping con manejo de errores, procesamiento batch de datos y scripts de deployment automatizado.",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
-    tags: ["Python", "Node.js", "CLI", "Automation", "Docker"],
-    github: "#"
+    title: "LoL Statistics · Analytics Platform",
+    description: "Aplicación web para análisis de estadísticas de League of Legends. Integración con API oficial de Riot Games, procesamiento de datos en Python, visualizaciones interactivas y perfiles de jugadores detallados.",
+    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+    tags: ["Python", "JavaScript", "API", "Data Analysis", "Gaming"],
+    github: "https://github.com/GriffithFan/estadisticas_lol"
   },
 ]
 

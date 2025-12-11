@@ -1,6 +1,8 @@
-# Portfolio Online
+# Portfolio - Ulises Lazarte (Griffith)
 
-Portafolio profesional desarrollado con React, TypeScript, Vite y Tailwind CSS.
+Portafolio profesional de Ulises Lazarte, desarrollador Full Stack especializado en tecnologías modernas y soluciones con IA.
+
+Desarrollado con React, TypeScript, Vite y Tailwind CSS.
 
 ## 🚀 Tecnologías
 
