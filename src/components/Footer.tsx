@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { personalInfo } from '../data/portfolio-data'
 
 const Footer = () => {
@@ -39,10 +39,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-gray-400 text-sm flex items-center space-x-2">
-            <span>© {currentYear} Griffith_Dev.</span>
-            <span className="flex items-center">
-              Hecho con <FiHeart className="mx-1 text-red-500" size={16} /> y React
-            </span>
+            <span>© {currentYear} Griffith_Dev. Desarrollado con React y TypeScript</span>
           </div>
         </div>
       </div>

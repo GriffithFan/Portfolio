@@ -2,18 +2,18 @@
 ## Full Stack Developer | AI Integration Specialist
 
 **Buenos Aires, Argentina**  
-📧 uisesl380@gmail.com | 📱 +54 3965576959  
-🔗 [GitHub: GriffithFan](https://github.com/GriffithFan)
+Email: uisesl380@gmail.com | Tel: +54 3965576959  
+GitHub: [github.com/GriffithFan](https://github.com/GriffithFan)
 
 ---
 
-## 💼 PERFIL PROFESIONAL
+## PERFIL PROFESIONAL
 
 Desarrollador Full Stack con experiencia comprobada en la creación de soluciones web escalables y sistemas de automatización. Especializado en React, Node.js, Python y TypeScript, con enfoque en integración de IA y optimización de procesos. Experiencia entregando proyectos comerciales en producción, incluyendo un sistema de gestión empresarial vendido a Dinatech S.A. Capacidad demostrada para trabajar de forma autónoma, gestionar proyectos completos y entregar soluciones que generan valor comercial.
 
 ---
 
-## 💻 EXPERIENCIA LABORAL
+## EXPERIENCIA LABORAL
 
 ### Full Stack Developer Freelancer | Dinatech S.A.
 **Portal Meraki - Sistema de Gestión de Redes** | Oct 2025  
@@ -56,7 +56,7 @@ Desarrollador Full Stack con experiencia comprobada en la creación de solucione
 
 ---
 
-## 🎓 EDUCACIÓN
+## EDUCACIÓN
 
 **Tecnicatura Universitaria en Programación** | 2024 - 2025  
 Universidad Tecnológica Nacional (UTN)  
@@ -76,7 +76,7 @@ Academia MasterMind
 
 ---
 
-## 🛠️ HABILIDADES TÉCNICAS
+## HABILIDADES TÉCNICAS
 
 ### Frontend Development
 - **Frameworks:** React, Next.js, TypeScript
@@ -103,7 +103,7 @@ Academia MasterMind
 
 ---
 
-## 🚀 PROYECTOS DESTACADOS
+## PROYECTOS DESTACADOS
 
 **Portal Meraki** - Sistema de gestión vendido | [portalmeraki.info](https://portalmeraki.info)  
 Sistema empresarial para gestión de redes escolares con 50+ usuarios activos
@@ -119,24 +119,24 @@ Plataforma de análisis de datos gaming con API de Riot Games
 
 ---
 
-## 📊 LOGROS DESTACADOS
+## LOGROS DESTACADOS
 
-✅ **Sistema vendido:** Portal Meraki adquirido por Dinatech S.A. para operación en producción  
-✅ **Desarrollo rápido:** Proyecto completo en 16 días (Portal Meraki)  
-✅ **Impacto educativo:** Scripts utilizados para mantenimiento de redes escolares en Argentina  
-✅ **Producción activa:** 3 aplicaciones web funcionando en servidores en producción  
-✅ **Automatización:** Suite de herramientas que optimizan workflows de equipos técnicos
+- **Sistema vendido:** Portal Meraki adquirido por Dinatech S.A. para operación en producción  
+- **Desarrollo rápido:** Proyecto completo en 16 días (Portal Meraki)  
+- **Impacto educativo:** Scripts utilizados para mantenimiento de redes escolares en Argentina  
+- **Producción activa:** 3 aplicaciones web funcionando en servidores en producción  
+- **Automatización:** Suite de herramientas que optimizan workflows de equipos técnicos
 
 ---
 
-## 🌐 IDIOMAS
+## IDIOMAS
 
 - **Español:** Nativo
 - **Inglés:** Avanzado (lectura/escritura), Básico (conversacional)
 
 ---
 
-## 💡 SOFT SKILLS
+## SOFT SKILLS
 
 - **Aprendizaje autónomo:** Capacidad de dominar nuevas tecnologías de forma independiente
 - **Resolución de problemas:** Enfoque analítico para solucionar desafíos técnicos complejos
@@ -146,7 +146,7 @@ Plataforma de análisis de datos gaming con API de Riot Games
 
 ---
 
-## 📌 INFORMACIÓN ADICIONAL
+## INFORMACIÓN ADICIONAL
 
 - **Disponibilidad:** Inmediata para proyectos freelance o posiciones full-time
 - **Modalidad:** Remoto, Híbrido o Presencial (Buenos Aires)

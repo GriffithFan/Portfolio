@@ -4,7 +4,7 @@ Portafolio profesional de Ulises Lazarte, desarrollador Full Stack especializado
 
 Desarrollado con React, TypeScript, Vite y Tailwind CSS.
 
-## 🚀 Tecnologías
+## Tecnologías
 
 - **React 18** con TypeScript
 - **Vite** - Build tool ultrarrápido
@@ -12,25 +12,25 @@ Desarrollado con React, TypeScript, Vite y Tailwind CSS.
 - **Framer Motion** - Animaciones fluidas
 - **React Icons** - Iconos de alta calidad
 
-## 📦 Instalación
+## Instalación
 
 ```bash
 npm install
 ```
 
-## 🛠️ Desarrollo
+## Desarrollo
 
 ```bash
 npm run dev
 ```
 
-## 🏗️ Build
+## Build
 
 ```bash
 npm run build
 ```
 
-## 🌐 Deploy
+## Deploy
 
 Este proyecto está optimizado para deployment en Vercel:
 
@@ -38,7 +38,7 @@ Este proyecto está optimizado para deployment en Vercel:
 2. Conecta tu repositorio en Vercel
 3. Deploy automático
 
-## 📝 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -49,10 +49,10 @@ src/
 └── styles/         # Estilos globales
 ```
 
-## 🎨 Personalización
+## Personalización
 
 Edita `src/data/portfolio-data.ts` para actualizar tu información personal, proyectos y skills.
 
-## 📄 Licencia
+## Licencia
 
 MIT

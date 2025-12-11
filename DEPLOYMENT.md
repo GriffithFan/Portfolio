@@ -1,6 +1,6 @@
 # Portfolio Online - Guía de Deployment
 
-## 🚀 Deploy en Vercel (Recomendado)
+## Deploy en Vercel (Recomendado)
 
 ### Opción 1: Deploy desde GitHub (Más fácil)
 
@@ -38,7 +38,7 @@
    vercel --prod
    ```
 
-## 🔧 Antes de hacer deploy
+## Antes de hacer deploy
 
 1. **Personaliza tu información:**
    - Edita `src/data/portfolio-data.ts`
@@ -53,7 +53,7 @@
    - En el dashboard de Vercel, ve a Settings > Domains
    - Agrega tu dominio personalizado
 
-## 📝 Variables de entorno
+## Variables de entorno
 
 Si necesitas agregar variables de entorno (por ejemplo, para un servicio de email):
 
@@ -65,13 +65,13 @@ Si necesitas agregar variables de entorno (por ejemplo, para un servicio de emai
    ```
 3. En Vercel: Settings > Environment Variables > Agregar cada variable
 
-## 🔄 Actualizaciones automáticas
+## Actualizaciones automáticas
 
 Una vez conectado a GitHub:
 - Cada push a `main` genera un deploy automático a producción
 - Cada PR genera un preview deployment único
 
-## 🌐 Otros servicios de hosting
+## Otros servicios de hosting
 
 ### Netlify
 ```bash

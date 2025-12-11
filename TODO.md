@@ -1,13 +1,13 @@
-# 📋 Lista de Tareas - Portfolio Ulises Lazarte
+# Lista de Tareas - Portfolio Ulises Lazarte
 
-## 🔥 Prioridad Alta (Próximas a implementar)
+## Prioridad Alta (Próximas a implementar)
 
 - [ ] **CV Profesional en PDF** - Crear y agregar botón de descarga
 - [ ] **Imágenes reales de proyectos** - Screenshots profesionales
 - [ ] **EmailJS integrado** - Formulario de contacto funcional
 - [ ] **Animaciones con Framer Motion** - Cards de proyectos y transiciones
 
-## 💎 Mejoras de Diseño
+## Mejoras de Diseño
 
 - [ ] **Dark/Light Mode Toggle** - Cambio de tema
 - [ ] **Scroll Progress Bar** - Barra de progreso superior
@@ -15,14 +15,14 @@
 - [ ] **Loading States** - Skeleton loaders
 - [ ] **Micro-interacciones** - Hover effects avanzados y tooltips
 
-## 📝 Contenido
+## Contenido
 
 - [ ] **Sección de Certificaciones/Educación** - Cursos y formación
 - [ ] **Blog Section** - Posts sobre proyectos y tecnología
 - [ ] **Testimonios** - Cliente de Portal Meraki
 - [ ] **Métricas en Proyectos** - Estadísticas de impacto
 
-## 🚀 Performance y SEO
+## Performance y SEO
 
 - [ ] **Meta Tags Completos** - Open Graph y Twitter Cards
 - [ ] **Schema.org markup** - SEO estructurado
@@ -30,7 +30,7 @@
 - [ ] **Optimización de imágenes** - WebP y lazy loading
 - [ ] **Lighthouse 100** - Optimización completa
 
-## 🎨 Features Avanzados
+## Features Avanzados
 
 - [ ] **Sección "Experiencia"** - Timeline profesional
 - [ ] **GitHub Activity** - Mostrar actividad reciente
@@ -39,13 +39,13 @@
 - [ ] **RSS Feed** - Para el blog
 - [ ] **Newsletter** - Captura de suscriptores
 
-## 📊 Analytics y Monitoring
+## Analytics y Monitoring
 
 - [ ] **Vercel Analytics** - Métricas de performance
 - [ ] **Error Tracking** - Sentry o similar
 - [ ] **Heatmaps** - Ver interacción de usuarios
 
-## ✅ Completado
+## Completado
 
 - [x] Estructura base con React + TypeScript + Vite
 - [x] Tailwind CSS configurado

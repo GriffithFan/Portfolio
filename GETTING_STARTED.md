@@ -1,10 +1,10 @@
-# 🚀 Guía de Inicio Rápido
+# Guía de Inicio Rápido
 
-## ✅ ¡Tu portfolio está listo!
+## ¡Tu portfolio está listo!
 
 El servidor de desarrollo está corriendo en: **http://localhost:3001/**
 
-## 📝 Próximos pasos
+## Próximos pasos
 
 ### 1. Personaliza tu información
 
@@ -46,12 +46,12 @@ Puedes agregar, quitar o modificar skills en `skills` array:
 
 ```typescript
 export const skills: Skill[] = [
-  { name: "React", icon: "⚛️", category: "frontend" },
+  { name: "React", icon: "SiReact", category: "frontend" },
   // Agrega las tuyas...
 ]
 ```
 
-## 🎨 Personalización avanzada
+## Personalización avanzada
 
 ### Cambiar colores
 
@@ -70,7 +70,7 @@ colors: {
 
 Crea nuevos componentes en `src/sections/` y agrégalos a [src/App.tsx](src/App.tsx).
 
-## 🚀 Comandos disponibles
+## Comandos disponibles
 
 ```bash
 npm run dev      # Iniciar servidor de desarrollo
@@ -79,7 +79,7 @@ npm run preview  # Preview del build
 npm run lint     # Linter
 ```
 
-## 📤 Deploy a producción
+## Deploy a producción
 
 Sigue las instrucciones en [DEPLOYMENT.md](DEPLOYMENT.md) para publicar tu portfolio en Vercel.
 
@@ -93,14 +93,14 @@ npm install -g vercel
 vercel
 ```
 
-## 💡 Tips
+## Tips
 
 - **Imágenes**: Usa servicios como [Unsplash](https://unsplash.com) para imágenes temporales
 - **Iconos**: Puedes cambiar los emojis por iconos de `react-icons/fi`
 - **SEO**: Edita el `<title>` y `<meta>` tags en [index.html](index.html)
 - **Favicon**: Reemplaza `/public/vite.svg` con tu propio favicon
 
-## 🐛 Solución de problemas
+## Solución de problemas
 
 ### El servidor no inicia
 ```bash
@@ -115,7 +115,7 @@ Los archivos ya están correctamente tipados, pero si ves errores, asegúrate de
 ### Puerto en uso
 Si el puerto 3000 está ocupado, Vite automáticamente usa 3001 o el siguiente disponible.
 
-## 📚 Recursos adicionales
+## Recursos adicionales
 
 - [Vite Docs](https://vitejs.dev/)
 - [React Docs](https://react.dev/)
