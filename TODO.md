@@ -9,7 +9,7 @@
 
 ## Mejoras de Diseño
 
-- [ ] **Dark/Light Mode Toggle** - Cambio de tema
+- [x] **Dark/Light Mode Toggle** - Cambio de tema con persistencia
 - [x] **Scroll Progress Bar** - Barra de progreso superior
 - [x] **Página 404 Custom** - Manejo de errores elegante
 - [ ] **Loading States** - Skeleton loaders
@@ -17,6 +17,7 @@
 
 ## Contenido
 
+- [x] **Sección de Experiencia** - Timeline profesional
 - [ ] **Sección de Certificaciones/Educación** - Cursos y formación
 - [ ] **Blog Section** - Posts sobre proyectos y tecnología
 - [ ] **Testimonios** - Cliente de Portal Meraki
@@ -32,8 +33,7 @@
 
 ## Features Avanzados
 
-- [ ] **Sección "Experiencia"** - Timeline profesional
-- [ ] **GitHub Activity** - Mostrar actividad reciente
+- [x] **GitHub Activity** - Mostrar actividad reciente via API
 - [ ] **Modo presentación** - Para mostrar en reuniones
 - [ ] **Multi-idioma** - Español/Inglés
 - [ ] **RSS Feed** - Para el blog
@@ -58,5 +58,5 @@
 
 ---
 
-**Última actualización:** 12 de junio de 2025
+**Última actualización:** 12 de diciembre de 2025
 **Estado:** Listo para producción

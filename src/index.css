@@ -3,13 +3,94 @@
 @tailwind utilities;
 
 @layer base {
+  /* Dark mode (default) */
+  :root {
+    --bg-primary: #030712;
+    --bg-secondary: #111827;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Light mode */
+  .light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(0, 0, 0, 0.08);
+  }
+
   body {
-    @apply bg-gray-950 text-gray-100;
+    @apply text-gray-100;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .light body,
+  .light {
+    @apply text-gray-900;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Light mode overrides for sections */
+  .light .glass-effect {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+  .light .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #f9fafb, #ffffff, #f3f4f6);
+  }
+
+  .light .from-gray-950,
+  .light .via-gray-900,
+  .light .to-gray-950 {
+    --tw-gradient-from: #f9fafb;
+    --tw-gradient-via: #ffffff;
+    --tw-gradient-to: #f3f4f6;
+  }
+
+  .light .text-gray-100 {
+    color: #111827;
+  }
+
+  .light .text-gray-300 {
+    color: #4b5563;
+  }
+
+  .light .text-gray-400 {
+    color: #6b7280;
+  }
+
+  .light .bg-gray-800 {
+    background-color: #e5e7eb;
+  }
+
+  .light .bg-gray-900 {
+    background-color: #f3f4f6;
+  }
+
+  .light .border-white\/10 {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .light .bg-white\/5 {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .light .hover\:bg-white\/10:hover {
+    background-color: rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -19,6 +100,8 @@
   }
   
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
   }
 }

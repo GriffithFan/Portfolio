@@ -1,5 +1,6 @@
 import { FiCode, FiTrendingUp, FiAward } from 'react-icons/fi'
 import { experience } from '../data/portfolio-data'
+import GitHubActivity from '../components/GitHubActivity'
 
 const About = () => {
   const highlights = [
@@ -80,7 +81,7 @@ const About = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {[
             { value: experience.years, label: 'Años en Tech' },
             { value: experience.activeMonths, label: 'Desarrollo Activo' },
@@ -99,6 +100,11 @@ const About = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* GitHub Activity */}
+        <div className="max-w-xl mx-auto">
+          <GitHubActivity />
         </div>
       </div>
     </section>

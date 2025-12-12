@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
+import ThemeToggle from './ThemeToggle'
 
 interface NavbarProps {
   scrolled: boolean
@@ -12,6 +13,7 @@ const Navbar = ({ scrolled }: NavbarProps) => {
     { name: 'Inicio', href: '#hero' },
     { name: 'Sobre mí', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Experiencia', href: '#experience' },
     { name: 'Proyectos', href: '#projects' },
     { name: 'Contacto', href: '#contact' },
   ]
@@ -33,25 +35,29 @@ const Navbar = ({ scrolled }: NavbarProps) => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-primary-400 transition-colors duration-200 font-medium dark:text-gray-300 dark:hover:text-primary-400"
               >
                 {item.name}
               </a>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-primary-400 transition-colors"
-          >
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-primary-400 transition-colors"
+            >
+              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
