@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FiMail, FiUser, FiMessageSquare, FiSend } from 'react-icons/fi'
+import { motion } from 'framer-motion'
+import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheck } from 'react-icons/fi'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,18 +34,30 @@ const Contact = () => {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
       <div className="max-w-4xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
             Contáctame
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? ¡Hablemos!
+            ¿Tienes un proyecto en mente? Hablemos.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
+          >
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">
                 Conectemos
@@ -56,8 +69,9 @@ const Contact = () => {
             </div>
 
             <div className="space-y-4">
-              <a
+              <motion.a
                 href="mailto:uisesl380@gmail.com"
+                whileHover={{ x: 5 }}
                 className="flex items-center space-x-4 glass-effect p-4 rounded-lg hover:bg-white/10 transition-all duration-300 group"
               >
                 <div className="text-primary-400 group-hover:scale-110 transition-transform">
@@ -67,12 +81,13 @@ const Contact = () => {
                   <div className="text-sm text-gray-500">Email</div>
                   <div className="text-white">uisesl380@gmail.com</div>
                 </div>
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href="https://github.com/GriffithFan"
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ x: 5 }}
                 className="flex items-center space-x-4 glass-effect p-4 rounded-lg hover:bg-white/10 transition-all duration-300 group"
               >
                 <div className="text-primary-400 group-hover:scale-110 transition-transform">
@@ -82,12 +97,17 @@ const Contact = () => {
                   <div className="text-sm text-gray-500">GitHub</div>
                   <div className="text-white">@GriffithFan</div>
                 </div>
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -146,10 +166,12 @@ const Contact = () => {
                 </div>
               </div>
 
-              <button
+              <motion.button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
+                whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
+                className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {status === 'sending' ? (
                   <>
@@ -157,16 +179,19 @@ const Contact = () => {
                     <span>Enviando...</span>
                   </>
                 ) : status === 'success' ? (
-                  <span>✓ ¡Mensaje enviado!</span>
+                  <>
+                    <FiCheck size={20} />
+                    <span>Mensaje enviado</span>
+                  </>
                 ) : (
                   <>
                     <FiSend size={20} />
                     <span>Enviar mensaje</span>
                   </>
                 )}
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

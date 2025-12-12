@@ -1,26 +1,58 @@
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 import { projects } from '../data/portfolio-data'
 
 const Projects = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' }
+    }
+  }
+
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
             Proyectos Destacados
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Aplicaciones web y herramientas que he desarrollado y desplegado en producción
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className="glass-effect rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300 hover:-translate-y-2 group"
+              variants={cardVariants}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="glass-effect rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-shadow duration-300 group"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden bg-gray-800">
@@ -79,17 +111,23 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="text-center mt-12"
+        >
           <p className="text-gray-400 mb-6">
-            ¿Quieres ver más proyectos? Visita mi GitHub
+            Explora más proyectos en mi repositorio
           </p>
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/GriffithFan"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-6 py-3 glass-effect text-gray-200 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
@@ -97,7 +135,7 @@ const Projects = () => {
             <FiGithub size={20} />
             <span>Ver todos en GitHub</span>
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

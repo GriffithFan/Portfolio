@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
+import ScrollProgress from './components/ScrollProgress'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Skills from './sections/Skills'
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
+      <ScrollProgress />
       <Navbar scrolled={scrolled} />
       <main>
         <Hero />

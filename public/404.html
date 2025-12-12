@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página no encontrada - Ulises Lazarte Portfolio" />
+    <title>404 - Página no encontrada | Ulises Lazarte</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom right, #030712, #111827, #030712);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        color: #f3f4f6;
+      }
+      .container {
+        text-align: center;
+        padding: 2rem;
+      }
+      .code {
+        font-size: 8rem;
+        font-weight: bold;
+        background: linear-gradient(to right, #38bdf8, #0284c7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: #9ca3af;
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        max-width: 28rem;
+      }
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s;
+      }
+      .btn-primary {
+        background: linear-gradient(to right, #0ea5e9, #0284c7);
+        color: white;
+      }
+      .btn-primary:hover {
+        box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.5);
+        transform: translateY(-2px);
+      }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #e5e7eb;
+        backdrop-filter: blur(10px);
+      }
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="code">404</div>
+      <h2>Página no encontrada</h2>
+      <p>La página que buscas no existe o ha sido movida.</p>
+      <div class="buttons">
+        <a href="/" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Ir al inicio
+        </a>
+        <a href="javascript:history.back()" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Volver atrás
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

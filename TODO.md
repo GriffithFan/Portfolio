@@ -2,16 +2,16 @@
 
 ## Prioridad Alta (Próximas a implementar)
 
-- [ ] **CV Profesional en PDF** - Crear y agregar botón de descarga
-- [ ] **Imágenes reales de proyectos** - Screenshots profesionales
-- [ ] **EmailJS integrado** - Formulario de contacto funcional
-- [ ] **Animaciones con Framer Motion** - Cards de proyectos y transiciones
+- [x] **CV Profesional en PDF** - Botón de descarga implementado
+- [ ] **Imágenes reales de proyectos** - Screenshots profesionales (tarea manual)
+- [ ] **EmailJS integrado** - Requiere crear cuenta en emailjs.com (tarea manual)
+- [x] **Animaciones con Framer Motion** - Cards de proyectos y transiciones
 
 ## Mejoras de Diseño
 
 - [ ] **Dark/Light Mode Toggle** - Cambio de tema
-- [ ] **Scroll Progress Bar** - Barra de progreso superior
-- [ ] **Página 404 Custom** - Manejo de errores elegante
+- [x] **Scroll Progress Bar** - Barra de progreso superior
+- [x] **Página 404 Custom** - Manejo de errores elegante
 - [ ] **Loading States** - Skeleton loaders
 - [ ] **Micro-interacciones** - Hover effects avanzados y tooltips
 
@@ -24,9 +24,9 @@
 
 ## Performance y SEO
 
-- [ ] **Meta Tags Completos** - Open Graph y Twitter Cards
+- [x] **Meta Tags Completos** - Open Graph y Twitter Cards
 - [ ] **Schema.org markup** - SEO estructurado
-- [ ] **Google Analytics** - Tracking de visitas
+- [ ] **Google Analytics** - Tracking de visitas (requiere cuenta)
 - [ ] **Optimización de imágenes** - WebP y lazy loading
 - [ ] **Lighthouse 100** - Optimización completa
 
