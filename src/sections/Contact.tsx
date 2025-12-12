@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheck } from 'react-icons/fi'
+import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_SERVICE_ID = 'service_fekb7so'
+const EMAILJS_TEMPLATE_ID = 'template_f6cokdq'
+const EMAILJS_PUBLIC_KEY = 'LojOQ6mBHrJE-stTC'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,13 +19,26 @@ const Contact = () => {
     e.preventDefault()
     setStatus('sending')
 
-    // TODO: Integrate email service (EmailJS, Formspree, or custom backend)
-    // Currently simulating submission for demonstration
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      )
+      
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus('idle'), 3000)
-    }, 1500)
+      setTimeout(() => setStatus('idle'), 4000)
+    } catch (error) {
+      console.error('EmailJS error:', error)
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -171,7 +189,13 @@ const Contact = () => {
                 disabled={status === 'sending'}
                 whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
                 whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
-                className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className={`w-full px-6 py-3 text-white rounded-lg font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 ${
+                  status === 'error' 
+                    ? 'bg-red-500 hover:shadow-red-500/50' 
+                    : status === 'success'
+                    ? 'bg-green-500 hover:shadow-green-500/50'
+                    : 'bg-gradient-to-r from-primary-500 to-primary-600 hover:shadow-primary-500/50'
+                } hover:shadow-lg`}
               >
                 {status === 'sending' ? (
                   <>
@@ -182,6 +206,11 @@ const Contact = () => {
                   <>
                     <FiCheck size={20} />
                     <span>Mensaje enviado</span>
+                  </>
+                ) : status === 'error' ? (
+                  <>
+                    <FiAlertCircle size={20} />
+                    <span>Error al enviar</span>
                   </>
                 ) : (
                   <>
