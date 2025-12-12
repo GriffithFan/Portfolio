@@ -11,16 +11,18 @@
     --text-secondary: #9ca3af;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.05);
   }
 
   /* Light mode */
   .light {
     --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --glass-bg: rgba(0, 0, 0, 0.03);
-    --glass-border: rgba(0, 0, 0, 0.08);
+    --bg-secondary: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --glass-bg: #ffffff;
+    --glass-border: rgba(0, 0, 0, 0.12);
+    --card-bg: #ffffff;
   }
 
   body {
@@ -34,6 +36,7 @@
   .light body,
   .light {
     @apply text-gray-900;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
 
   html {
@@ -44,53 +47,116 @@
 @layer components {
   /* Light mode overrides for sections */
   .light .glass-effect {
-    background: var(--glass-bg);
-    border-color: var(--glass-border);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
   }
 
   .light .bg-gradient-to-br {
-    background: linear-gradient(to bottom right, #f9fafb, #ffffff, #f3f4f6);
+    background: linear-gradient(to bottom right, #f8fafc, #ffffff, #f1f5f9);
   }
 
   .light .from-gray-950,
   .light .via-gray-900,
   .light .to-gray-950 {
-    --tw-gradient-from: #f9fafb;
+    --tw-gradient-from: #f8fafc;
     --tw-gradient-via: #ffffff;
-    --tw-gradient-to: #f3f4f6;
+    --tw-gradient-to: #f1f5f9;
+  }
+
+  /* Text colors for light mode */
+  .light .text-white {
+    color: #0f172a;
   }
 
   .light .text-gray-100 {
-    color: #111827;
+    color: #0f172a;
+  }
+
+  .light .text-gray-200 {
+    color: #1e293b;
   }
 
   .light .text-gray-300 {
-    color: #4b5563;
+    color: #334155;
   }
 
   .light .text-gray-400 {
-    color: #6b7280;
+    color: #64748b;
   }
 
+  /* Background colors for light mode */
   .light .bg-gray-800 {
-    background-color: #e5e7eb;
+    background-color: #f1f5f9;
   }
 
   .light .bg-gray-900 {
-    background-color: #f3f4f6;
+    background-color: #f8fafc;
   }
 
+  .light .bg-gray-900\/30 {
+    background-color: rgba(241, 245, 249, 0.8);
+  }
+
+  .light .bg-gray-950 {
+    background-color: #ffffff;
+  }
+
+  /* Border colors */
   .light .border-white\/10 {
     border-color: rgba(0, 0, 0, 0.1);
   }
 
+  .light .border-white\/20 {
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .light .border-gray-800 {
+    border-color: #e2e8f0;
+  }
+
+  /* Background opacity overrides */
   .light .bg-white\/5 {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(15, 23, 42, 0.03);
+  }
+
+  .light .bg-white\/10 {
+    background-color: rgba(15, 23, 42, 0.06);
   }
 
   .light .hover\:bg-white\/10:hover {
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: rgba(15, 23, 42, 0.08);
+  }
+
+  /* Primary color adjustments for better contrast in light mode */
+  .light .text-primary-400 {
+    color: #0284c7;
+  }
+
+  .light .bg-primary-500\/10 {
+    background-color: rgba(2, 132, 199, 0.1);
+  }
+
+  .light .border-primary-500\/20 {
+    border-color: rgba(2, 132, 199, 0.25);
+  }
+
+  /* Card and section specific fixes */
+  .light .hover\:shadow-primary-500\/30:hover {
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.2);
+  }
+
+  .light .hover\:shadow-primary-500\/20:hover {
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
+  }
+
+  .light .hover\:shadow-primary-500\/10:hover {
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
+  }
+
+  /* Gradient overlays for images */
+  .light .from-gray-900 {
+    --tw-gradient-from: rgba(15, 23, 42, 0.8);
   }
 }
 
