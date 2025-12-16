@@ -95,11 +95,11 @@ Academia MasterMind
 - **Development:** VS Code, CLI Tools
 - **Networking:** Cisco Meraki, SNMP
 
-### IA & Automatización
-- **IA Integration:** OpenAI API, Prompt Engineering
-- **Automatización:** Python Scripts, Web Scraping
-- **CLI Development:** Herramientas de línea de comandos
-- **APIs:** Integración Salesforce, Riot Games, Cisco Meraki
+### IA & Automatizacion
+- **Integracion:** OpenAI API, Prompt Engineering
+- **Automatizacion:** Python Scripts, Web Scraping
+- **CLI Development:** Herramientas de linea de comandos
+- **APIs:** Integracion Salesforce, Riot Games, Cisco Meraki
 
 ---
 
@@ -146,13 +146,13 @@ Plataforma de análisis de datos gaming con API de Riot Games
 
 ---
 
-## INFORMACIÓN ADICIONAL
+## INFORMACION ADICIONAL
 
 - **Disponibilidad:** Inmediata para proyectos freelance o posiciones full-time
-- **Modalidad:** Remoto, Híbrido o Presencial (Buenos Aires)
-- **Intereses:** Integración de IA, Arquitectura de Software, Automatización, DevOps
-- **Portafolio:** En desarrollo - Portfolio profesional con React + TypeScript
+- **Modalidad:** Remoto, Hibrido o Presencial (Buenos Aires)
+- **Intereses:** Arquitectura de Software, Automatizacion, DevOps
+- **Portfolio:** [portfolio-mocha-three-38.vercel.app](https://portfolio-mocha-three-38.vercel.app)
 
 ---
 
-*Última actualización: Diciembre 2025*
+*Ultima actualizacion: Diciembre 2025*

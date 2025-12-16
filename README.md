@@ -1,18 +1,18 @@
-# Portfolio - Ulises Lazarte (Griffith)
+# Portfolio - Ulises Lazarte
 
-Portafolio profesional de Ulises Lazarte, desarrollador Full Stack especializado en tecnologías modernas y soluciones con IA.
+Portfolio profesional desarrollado con React, TypeScript, Vite y Tailwind CSS.
 
-Desarrollado con React, TypeScript, Vite y Tailwind CSS.
+**Demo:** [portfolio-mocha-three-38.vercel.app](https://portfolio-mocha-three-38.vercel.app)
 
-## Tecnologías
+## Stack Tecnologico
 
-- **React 18** con TypeScript
-- **Vite** - Build tool ultrarrápido
-- **Tailwind CSS** - Estilos modernos y responsivos
-- **Framer Motion** - Animaciones fluidas
-- **React Icons** - Iconos de alta calidad
+- **React 18** + TypeScript
+- **Vite** - Build tool
+- **Tailwind CSS** - Estilos
+- **Framer Motion** - Animaciones
+- **EmailJS** - Formulario de contacto
 
-## Instalación
+## Instalacion
 
 ```bash
 npm install
@@ -24,6 +24,8 @@ npm install
 npm run dev
 ```
 
+El servidor se ejecuta en `http://localhost:3001`
+
 ## Build
 
 ```bash
@@ -32,26 +34,35 @@ npm run build
 
 ## Deploy
 
-Este proyecto está optimizado para deployment en Vercel:
+Proyecto configurado para Vercel con deploy automatico desde GitHub.
 
-1. Push a GitHub
-2. Conecta tu repositorio en Vercel
-3. Deploy automático
-
-## Estructura del Proyecto
+## Estructura
 
 ```
 src/
-├── components/       # Componentes reutilizables
-├── sections/        # Secciones del portfolio
-├── data/           # Datos y configuración
-├── assets/         # Imágenes y recursos
-└── styles/         # Estilos globales
+├── components/     # Navbar, Footer, ScrollProgress, ThemeToggle, etc.
+├── sections/       # Hero, About, Skills, Experience, Projects, Contact
+├── context/        # ThemeContext
+├── data/           # portfolio-data.ts
+└── pages/          # NotFound
 ```
 
-## Personalización
+## Personalizacion
 
-Edita `src/data/portfolio-data.ts` para actualizar tu información personal, proyectos y skills.
+Edita `src/data/portfolio-data.ts` para actualizar informacion personal, proyectos y skills.
+
+## Caracteristicas
+
+- Dark/Light mode con persistencia
+- Animaciones con Framer Motion
+- Skeleton loaders
+- Tooltips en skills
+- Lazy loading de secciones
+- SEO optimizado (Open Graph, Schema.org)
+- Formulario de contacto funcional
+- GitHub Activity widget
+- Seccion de experiencia con timeline
+- Responsive design
 
 ## Licencia
 
