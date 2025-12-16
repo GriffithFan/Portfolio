@@ -1,14 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import ScrollProgress from './components/ScrollProgress'
 import Hero from './sections/Hero'
-import About from './sections/About'
-import Skills from './sections/Skills'
-import Experience from './sections/Experience'
-import Projects from './sections/Projects'
-import Contact from './sections/Contact'
 import Footer from './components/Footer'
+
+// Lazy load sections below the fold for better initial load performance
+const About = lazy(() => import('./sections/About'))
+const Skills = lazy(() => import('./sections/Skills'))
+const Experience = lazy(() => import('./sections/Experience'))
+const Projects = lazy(() => import('./sections/Projects'))
+const Contact = lazy(() => import('./sections/Contact'))
+
+// Loading fallback component
+const SectionLoader = () => (
+  <div className="py-20 flex justify-center">
+    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-400"></div>
+  </div>
+)
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -28,11 +37,21 @@ function App() {
         <Navbar scrolled={scrolled} />
         <main>
           <Hero />
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
+          <Suspense fallback={<SectionLoader />}>
+            <About />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Skills />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Experience />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Projects />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <Contact />
+          </Suspense>
         </main>
         <Footer />
       </div>

@@ -1,8 +1,23 @@
-import * as SimpleIcons from 'react-icons/si'
-import * as FeatherIcons from 'react-icons/fi'
+import { 
+  SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss,
+  SiNodedotjs, SiExpress, SiPython, SiPostgresql, SiPrisma, SiPandas,
+  SiGit, SiGithub, SiDocker, SiVercel, SiOpenai
+} from 'react-icons/si'
+import { FiTerminal, FiZap, FiCode } from 'react-icons/fi'
+import { VscVscode } from 'react-icons/vsc'
 import { motion } from 'framer-motion'
 import { skills } from '../data/portfolio-data'
 import { IconType } from 'react-icons'
+import Tooltip from '../components/Tooltip'
+
+// Icon map for tree-shaking optimization
+const iconMap: Record<string, IconType> = {
+  SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss,
+  SiNodedotjs, SiExpress, SiPython, SiPostgresql, SiPrisma, SiPandas,
+  SiGit, SiGithub, SiDocker, SiVercel, SiOpenai,
+  SiVisualstudiocode: VscVscode,
+  FiTerminal, FiZap, FiCode
+}
 
 const Skills = () => {
   const categories = {
@@ -12,12 +27,9 @@ const Skills = () => {
     ai: 'IA & Automatización',
   }
 
-  // Dynamically resolve icon component from library with fallback
+  // Get icon from pre-imported map for optimal bundle size
   const getIcon = (iconName: string): IconType => {
-    if (iconName.startsWith('Si')) {
-      return (SimpleIcons as any)[iconName] || SimpleIcons.SiReact
-    }
-    return (FeatherIcons as any)[iconName] || FeatherIcons.FiCode
+    return iconMap[iconName] || SiReact
   }
 
   const containerVariants = {
@@ -84,19 +96,20 @@ const Skills = () => {
                     const IconComponent = getIcon(skill.icon)
                     
                     return (
-                      <motion.div
-                        key={index}
-                        variants={itemVariants}
-                        whileHover={{ y: -8, scale: 1.05 }}
-                        className="glass-effect p-6 rounded-xl hover:bg-white/10 transition-colors duration-300 hover:shadow-lg hover:shadow-primary-500/30 group cursor-pointer"
-                      >
-                        <div className="text-center">
-                          <div className="text-primary-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                            <IconComponent size={40} />
+                      <Tooltip key={index} content={skill.description || skill.name} position="top">
+                        <motion.div
+                          variants={itemVariants}
+                          whileHover={{ y: -8, scale: 1.05 }}
+                          className="glass-effect p-6 rounded-xl hover:bg-white/10 transition-colors duration-300 hover:shadow-lg hover:shadow-primary-500/30 group cursor-pointer"
+                        >
+                          <div className="text-center">
+                            <div className="text-primary-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                              <IconComponent size={40} />
+                            </div>
+                            <h4 className="text-white font-medium text-sm">{skill.name}</h4>
                           </div>
-                          <h4 className="text-white font-medium text-sm">{skill.name}</h4>
-                        </div>
-                      </motion.div>
+                        </motion.div>
+                      </Tooltip>
                     )
                   })}
                 </motion.div>

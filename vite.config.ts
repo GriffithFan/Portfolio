@@ -12,12 +12,26 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom']
+          // Core React libraries
+          'vendor-react': ['react', 'react-dom'],
+          // Animation library
+          'vendor-motion': ['framer-motion'],
+          // Icons library (large)
+          'vendor-icons': ['react-icons'],
+          // Email service
+          'vendor-email': ['@emailjs/browser']
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 600
   }
 })

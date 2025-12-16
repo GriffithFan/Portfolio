@@ -12,6 +12,7 @@ export interface Skill {
   name: string
   icon: string
   category: 'frontend' | 'backend' | 'tools' | 'ai'
+  description?: string
 }
 
 export const personalInfo = {
@@ -25,33 +26,33 @@ export const personalInfo = {
 
 export const skills: Skill[] = [
   // Frontend
-  { name: "React", icon: "SiReact", category: "frontend" },
-  { name: "TypeScript", icon: "SiTypescript", category: "frontend" },
-  { name: "JavaScript", icon: "SiJavascript", category: "frontend" },
-  { name: "HTML5", icon: "SiHtml5", category: "frontend" },
-  { name: "CSS3", icon: "SiCss3", category: "frontend" },
-  { name: "Tailwind CSS", icon: "SiTailwindcss", category: "frontend" },
+  { name: "React", icon: "SiReact", category: "frontend", description: "Componentes, hooks, context API" },
+  { name: "TypeScript", icon: "SiTypescript", category: "frontend", description: "Tipado estático, interfaces, generics" },
+  { name: "JavaScript", icon: "SiJavascript", category: "frontend", description: "ES6+, async/await, DOM" },
+  { name: "HTML5", icon: "SiHtml5", category: "frontend", description: "Semántica, accesibilidad, SEO" },
+  { name: "CSS3", icon: "SiCss3", category: "frontend", description: "Flexbox, Grid, animaciones" },
+  { name: "Tailwind CSS", icon: "SiTailwindcss", category: "frontend", description: "Utility-first, responsive design" },
   
   // Backend
-  { name: "Node.js", icon: "SiNodedotjs", category: "backend" },
-  { name: "Express", icon: "SiExpress", category: "backend" },
-  { name: "Python", icon: "SiPython", category: "backend" },
-  { name: "PostgreSQL", icon: "SiPostgresql", category: "backend" },
-  { name: "Prisma", icon: "SiPrisma", category: "backend" },
-  { name: "Pandas", icon: "SiPandas", category: "backend" },
+  { name: "Node.js", icon: "SiNodedotjs", category: "backend", description: "APIs REST, Express, streams" },
+  { name: "Express", icon: "SiExpress", category: "backend", description: "Middleware, routing, auth" },
+  { name: "Python", icon: "SiPython", category: "backend", description: "Scripts, automatización, data" },
+  { name: "PostgreSQL", icon: "SiPostgresql", category: "backend", description: "SQL, relaciones, índices" },
+  { name: "Prisma", icon: "SiPrisma", category: "backend", description: "ORM, migraciones, type-safe" },
+  { name: "Pandas", icon: "SiPandas", category: "backend", description: "DataFrames, ETL, análisis" },
   
   // Tools & DevOps
-  { name: "Git", icon: "SiGit", category: "tools" },
-  { name: "GitHub", icon: "SiGithub", category: "tools" },
-  { name: "VS Code", icon: "SiVisualstudiocode", category: "tools" },
-  { name: "Docker", icon: "SiDocker", category: "tools" },
-  { name: "Vercel", icon: "SiVercel", category: "tools" },
+  { name: "Git", icon: "SiGit", category: "tools", description: "Control de versiones, branching" },
+  { name: "GitHub", icon: "SiGithub", category: "tools", description: "CI/CD, PRs, colaboración" },
+  { name: "VS Code", icon: "SiVisualstudiocode", category: "tools", description: "Extensions, debugging, tasks" },
+  { name: "Docker", icon: "SiDocker", category: "tools", description: "Contenedores, compose, images" },
+  { name: "Vercel", icon: "SiVercel", category: "tools", description: "Deploy, edge functions, analytics" },
   
   // AI & Automation
-  { name: "OpenAI", icon: "SiOpenai", category: "ai" },
-  { name: "Terminal", icon: "FiTerminal", category: "ai" },
-  { name: "Automatización", icon: "FiZap", category: "ai" },
-  { name: "Web Scraping", icon: "FiCode", category: "ai" },
+  { name: "OpenAI", icon: "SiOpenai", category: "ai", description: "GPT API, prompts, embeddings" },
+  { name: "Terminal", icon: "FiTerminal", category: "ai", description: "Bash, PowerShell, scripts CLI" },
+  { name: "Automatización", icon: "FiZap", category: "ai", description: "Workflows, cron, pipelines" },
+  { name: "Web Scraping", icon: "FiCode", category: "ai", description: "Puppeteer, BeautifulSoup, Cheerio" },
 ]
 
 export const projects: Project[] = [
