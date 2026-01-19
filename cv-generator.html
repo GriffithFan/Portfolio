@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ulises Lazarte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: white;
+            /* FIX CRÍTICO para el kerning */
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "kern" 1, "liga" 1;
+            letter-spacing: 0.01em;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm 20mm;
+        }
+
+        h1 {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 4pt;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 3pt;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            font-size: 18pt;
+            font-weight: 700;
+            color: #0066cc;
+            margin-top: 16pt;
+            margin-bottom: 10pt;
+            border-bottom: 2pt solid #0066cc;
+            padding-bottom: 4pt;
+            letter-spacing: 0;
+        }
+
+        h4 {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 10pt;
+            margin-bottom: 4pt;
+            letter-spacing: 0;
+        }
+
+        p {
+            margin-bottom: 8pt;
+            letter-spacing: 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20pt;
+            border-bottom: 1pt solid #e0e0e0;
+            padding-bottom: 12pt;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #666;
+            margin-top: 6pt;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .section {
+            margin-bottom: 16pt;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 11.5pt;
+        }
+
+        .company {
+            color: #0066cc;
+            font-weight: 500;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+            font-size: 10pt;
+        }
+
+        .description {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 6pt;
+        }
+
+        ul {
+            margin-left: 20pt;
+            margin-bottom: 8pt;
+        }
+
+        li {
+            margin-bottom: 4pt;
+            letter-spacing: 0;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #1a1a1a;
+            letter-spacing: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12pt;
+            margin-top: 8pt;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 4pt;
+        }
+
+        .skill-category ul {
+            margin-left: 16pt;
+        }
+
+        .skill-category li {
+            margin-bottom: 2pt;
+            font-size: 10pt;
+        }
+
+        hr {
+            border: none;
+            border-top: 1pt solid #e0e0e0;
+            margin: 12pt 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .highlight {
+            background-color: #f0f7ff;
+            padding: 10pt;
+            border-left: 3pt solid #0066cc;
+            margin: 8pt 0;
+        }
+
+        /* Page break control */
+        .section {
+            page-break-inside: avoid;
+        }
+
+        h3 {
+            page-break-after: avoid;
+        }
+
+        h4 {
+            page-break-after: avoid;
+        }
+
+        ul {
+            page-break-inside: avoid;
+        }
+
+        .job-entry {
+            page-break-inside: avoid;
+        }
+
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .container {
+                padding: 10mm 15mm;
+                max-width: 100%;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            h3 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+            h4 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>ULISES LAZARTE</h1>
+            <h2>Full Stack Developer | AI Integration Specialist</h2>
+            <div class="contact-info">
+                <p>
+                    <strong>Buenos Aires, Argentina</strong><br>
+                    Email: <a href="mailto:uisesl380@gmail.com">uisesl380@gmail.com</a> | 
+                    Tel: +54 3965576959<br>
+                    GitHub: <a href="https://github.com/GriffithFan">github.com/GriffithFan</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- PERFIL PROFESIONAL -->
+        <div class="section">
+            <h3>PERFIL PROFESIONAL</h3>
+            <p>
+                Desarrollador Full Stack con experiencia comprobada en la creación de soluciones web escalables y sistemas de automatización. 
+                Especializado en React, Node.js, Python y TypeScript, con enfoque en integración de IA y optimización de procesos. 
+                Experiencia entregando proyectos comerciales en producción, incluyendo un sistema de gestión empresarial vendido a Dinatech S.A. 
+                Capacidad demostrada para trabajar de forma autónoma, gestionar proyectos completos y entregar soluciones que generan valor comercial.
+            </p>
+        </div>
+
+        <!-- EXPERIENCIA LABORAL -->
+        <div class="section">
+            <h3>EXPERIENCIA LABORAL</h3>
+
+            <!-- Portal Meraki -->
+            <div class="job-entry">
+            <h4><span class="job-title">Full Stack Developer Freelancer</span> | <span class="company">Dinatech S.A.</span></h4>
+            <p class="description">Portal Meraki - Sistema de Gestión de Redes | Oct 2025</p>
+            <p style="font-style: italic; color: #0066cc; margin-bottom: 6pt;">
+                Proyecto vendido y desplegado en producción en VPS
+            </p>
+            <ul>
+                <li>Desarrollé sistema integral de gestión para técnicos especializados en mantenimiento de redes escolares en Argentina</li>
+                <li>Implementé arquitectura cliente-servidor con React y Node.js, autenticación segura JWT y PWA con caché optimizado</li>
+                <li>Diseñé e integré dashboards interactivos para gestión de dispositivos y análisis de red en tiempo real</li>
+                <li>Proyecto escalado para 50 cuentas de usuarios (cuadrillas de técnicos) con alta disponibilidad</li>
+                <li><strong>Stack:</strong> JavaScript, Node.js, Express, React, PWA, PostgreSQL, API RESTful</li>
+                <li><strong>Resultado:</strong> Sistema vendido a cliente corporativo y actualmente operativo en portalmeraki.info</li>
+            </div>
+
+            <!-- Kira -->
+            <div class="job-entry"
+            <!-- Kira -->
+            <h4><span class="job-title">Full Stack Developer</span> | <span class="company">Proyecto Personal</span></h4>
+            <p class="description">Kira - E-commerce de Ropa Alternativa | Dic 2025 - Actualidad</p>
+            <p style="font-style: italic; color: #0066cc; margin-bottom: 6pt;">
+                En producción: tienda-de-ropa-online.vercel.app
+            </p>
+            <ul>
+                <li>Desarrollé plataforma e-commerce completa con TypeScript, enfocada en ropa estilo alternativo japonés</li>
+                <li>Implementé panel administrativo para gestión de inventario, productos y órdenes</li>
+                <li>Integré sistema de autenticación de usuarios, carrito de compras y pasarela de pagos</li>
+                <li>Diseño minimalista responsivo con animaciones suaves y experiencia de usuario optimizada</li>
+                <li><strong>Stack:</strong> TypeScript, React, Next.js, Tailwind CSS, Vercel, E-commerce</li>
+            </div>
+
+            <!-- Automation -->
+            <div class="job-entry"
+
+            <!-- Automation -->
+            <h4><span class="job-title">Automation Engineer</span> | <span class="company">THNet & Cisco</span></h4>
+            <p class="description">Scripts de Automatización Meraki/Salesforce | 2024 - 2025</p>
+            <ul>
+                <li>Desarrollé suite completa de scripts Python para automatización de gestión de redes Cisco Meraki</li>
+                <li>Implementé integración con Salesforce para rastreo de equipos del Ministerio de Educación</li>
+                <li>Creé herramientas CLI para análisis de velocidad WAN, gestión de dispositivos y generación de reportes</li>
+                <li>Automatización de recolección de relevamientos, consultas SNMP y web scraping de dashboards</li>
+                <li><strong>Stack:</strong> Python, CLI Tools, Salesforce API, Cisco Meraki API, SNMP, Excel Automation</li>
+            </div>
+
+            <!-- Proyectos Adicionales -->
+            <div class="job-entry"
+
+            <!-- Proyectos Adicionales -->
+            <h4>Proyectos Adicionales</h4>
+            <p><strong>LoL Statistics - Analytics Platform</strong></p>
+            <ul>
+                <li>Aplicación web para análisis de estadísticas de League of Legends con integración API de Riot Games</li>
+                <li>Procesamiento de datos en Python, visualizaciones interactivas y perfiles detallados de jugadores</li>
+            </div>
+                <li><strong>Stack:</strong> Python, JavaScript, API Integration, Data Analysis</li>
+            </ul>
+        </div>
+
+        <!-- EDUCACIÓN -->
+        <div class="section">
+            <h3>EDUCACIÓN</h3>
+            
+            <h4>Tecnicatura Universitaria en Programación | 2024 - 2025</h4>
+            <p>Universidad Tecnológica Nacional (UTN) - <em>En pausa por compromisos laborales</em></p>
+
+            <h4>Ingeniería en Informática | 2019 - 2022</h4>
+            <p>Universidad Nacional de Tucumán (UNT) - <em>En stand-by por mudanza a Buenos Aires</em></p>
+
+            <h4>Técnico Electromecánico | 2018</h4>
+            <p>Orientación en Automatización - <em>Título secundario completo</em></p>
+
+            <h4>Desarrollo Full Stack & Python | 2024</h4>
+            <p>Academia MasterMind - <em>Certificación en desarrollo web completo y Python avanzado</em></p>
+        </div>
+
+        <!-- HABILIDADES TÉCNICAS -->
+        <div class="section">
+            <h3>HABILIDADES TÉCNICAS</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <ul>
+                        <li>Frameworks: React, Next.js, TypeScript</li>
+                        <li>Styling: Tailwind CSS, CSS3, HTML5</li>
+                        <li>Herramientas: Vite, Webpack, npm/yarn</li>
+                    </ul>
+
+                    <h4>Backend Development</h4>
+                    <ul>
+                        <li>Lenguajes: JavaScript, Python, Node.js</li>
+                        <li>Frameworks: Express.js, API RESTful</li>
+                        <li>Bases de datos: PostgreSQL, Prisma ORM</li>
+                        <li>Data Processing: Pandas, NumPy</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>DevOps & Tools</h4>
+                    <ul>
+                        <li>Control de versiones: Git, GitHub</li>
+                        <li>Deployment: Vercel, VPS, Docker (básico)</li>
+                        <li>Development: VS Code, CLI Tools</li>
+                        <li>Networking: Cisco Meraki, SNMP</li>
+                    </ul>
+
+                    <h4>IA & Automatización</h4>
+                    <ul>
+                        <li>Integración: OpenAI API, Prompt Engineering</li>
+                        <li>Automatización: Python Scripts, Web Scraping</li>
+                        <li>CLI Development: Herramientas de línea de comandos</li>
+                        <li>APIs: Integración Salesforce, Riot Games, Cisco Meraki</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTOS DESTACADOS -->
+        <div class="section">
+            <h3>PROYECTOS DESTACADOS</h3>
+            <ul>
+                <li><strong>Portal Meraki</strong> - Sistema de gestión vendido | portalmeraki.info<br>
+                    Sistema empresarial para gestión de redes escolares con 50+ usuarios activos</li>
+                
+                <li><strong>Kira E-commerce</strong> - Tienda online en producción | tienda-de-ropa-online.vercel.app<br>
+                    Plataforma e-commerce completa con panel admin y pasarela de pagos</li>
+                
+                <li><strong>Meraki Automation Suite</strong> - Scripts de automatización | GitHub<br>
+                    Suite de herramientas CLI para gestión automatizada de redes Cisco Meraki</li>
+                
+                <li><strong>LoL Statistics</strong> - Analytics Platform | GitHub<br>
+                    Plataforma de análisis de datos gaming con API de Riot Games</li>
+            </ul>
+        </div>
+
+        <!-- LOGROS DESTACADOS -->
+        <div class="section">
+            <h3>LOGROS DESTACADOS</h3>
+            <ul>
+                <li><strong>Sistema vendido:</strong> Portal Meraki adquirido por Dinatech S.A. para operación en producción</li>
+                <li><strong>Desarrollo rápido:</strong> Proyecto completo en 16 días (Portal Meraki)</li>
+                <li><strong>Impacto educativo:</strong> Scripts utilizados para mantenimiento de redes escolares en Argentina</li>
+                <li><strong>Producción activa:</strong> 3 aplicaciones web funcionando en servidores en producción</li>
+                <li><strong>Automatización:</strong> Suite de herramientas que optimizan workflows de equipos técnicos</li>
+            </ul>
+        </div>
+
+        <!-- IDIOMAS & SOFT SKILLS -->
+        <div class="section">
+            <h3>IDIOMAS</h3>
+            <ul>
+                <li><strong>Español:</strong> Nativo</li>
+                <li><strong>Inglés:</strong> Avanzado (lectura/escritura), Básico (conversacional)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>SOFT SKILLS</h3>
+            <ul>
+                <li><strong>Aprendizaje autónomo:</strong> Capacidad de dominar nuevas tecnologías de forma independiente</li>
+                <li><strong>Resolución de problemas:</strong> Enfoque analítico para solucionar desafíos técnicos complejos</li>
+                <li><strong>Gestión de proyectos:</strong> Experiencia manejando proyectos completos de inicio a fin</li>
+                <li><strong>Trabajo remoto:</strong> Experiencia entregando proyectos de forma autónoma</li>
+                <li><strong>Comunicación técnica:</strong> Habilidad para documentar y explicar soluciones técnicas</li>
+            </ul>
+        </div>
+
+        <!-- INFORMACIÓN ADICIONAL -->
+        <div class="section">
+            <h3>INFORMACIÓN ADICIONAL</h3>
+            <ul>
+                <li><strong>Disponibilidad:</strong> Inmediata para proyectos freelance o posiciones full-time</li>
+                <li><strong>Modalidad:</strong> Remoto, Híbrido o Presencial (Buenos Aires)</li>
+                <li><strong>Intereses:</strong> Arquitectura de Software, Automatización, DevOps</li>
+                <li><strong>Portfolio:</strong> portfolio-mocha-three-38.vercel.app</li>
+            </ul>
+        </div>
+
+        <hr>
+        <p style="text-align: center; color: #666; font-size: 9pt; margin-top: 12pt;">
+            <em>Última actualización: Enero 2026</em>
+        </p>
+    </div>
+</body>
+</html>
