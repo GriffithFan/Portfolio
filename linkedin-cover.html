@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Cover - Ulises Lazarte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        .cover-container {
+            width: 1584px;
+            height: 396px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        /* Grid pattern overlay */
+        .grid-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(100, 116, 139, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(100, 116, 139, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+        
+        /* Accent gradient */
+        .accent-gradient {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            top: -200px;
+            right: 100px;
+            filter: blur(80px);
+        }
+        
+        .accent-gradient-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            bottom: -100px;
+            right: 400px;
+            filter: blur(60px);
+        }
+        
+        /* Main content */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 80px;
+        }
+        
+        .text-section {
+            text-align: right;
+            margin-right: 60px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            font-weight: 500;
+            color: #60a5fa;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .name {
+            font-size: 68px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 18px;
+            border-radius: 6px;
+            color: #93c5fd;
+            font-size: 15px;
+            font-weight: 600;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        /* Decorative elements */
+        .deco-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+            opacity: 0.4;
+        }
+        
+        .deco-line-1 {
+            width: 400px;
+            top: 100px;
+            left: 300px;
+        }
+        
+        .deco-line-2 {
+            width: 300px;
+            bottom: 120px;
+            right: 300px;
+        }
+        
+        /* Code snippet */
+        .code-snippet {
+            position: absolute;
+            left: 80px;
+            top: 60px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 24px 28px;
+            border-radius: 10px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.8;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            max-width: 320px;
+        }
+        
+        .code-snippet .keyword {
+            color: #c084fc;
+            font-weight: 600;
+        }
+        
+        .code-snippet .string {
+            color: #6ee7b7;
+        }
+        
+        .code-snippet .property {
+            color: #60a5fa;
+        }
+        
+        .code-snippet .bracket {
+            color: #fbbf24;
+        }
+        
+        /* Geometric shapes */
+        .shape {
+            position: absolute;
+            border-radius: 12px;
+            opacity: 0.05;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .shape-1 {
+            width: 150px;
+            height: 150px;
+            top: 220px;
+            left: 450px;
+            transform: rotate(45deg);
+        }
+        
+        .shape-2 {
+            width: 100px;
+            height: 100px;
+            top: 30px;
+            right: 200px;
+            transform: rotate(30deg);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover-container">
+        <!-- Background overlays -->
+        <div class="grid-overlay"></div>
+        <div class="accent-gradient"></div>
+        <div class="accent-gradient-2"></div>
+        
+        <!-- Decorative lines -->
+        <div class="deco-line deco-line-1"></div>
+        <div class="deco-line deco-line-2"></div>
+        
+        <!-- Geometric shapes -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        
+        <!-- Code snippet (left side, won't be covered) -->
+        <div class="code-snippet">
+            <div><span class="keyword">const</span> <span class="property">skills</span> <span class="bracket">=</span> <span class="bracket">{</span></div>
+            <div>  frontend: <span class="bracket">[</span></div>
+            <div>    <span class="string">'React'</span>,</div>
+            <div>    <span class="string">'TypeScript'</span>,</div>
+            <div>    <span class="string">'Next.js'</span></div>
+            <div>  <span class="bracket">]</span>,</div>
+            <div>  backend: <span class="bracket">[</span></div>
+            <div>    <span class="string">'Node.js'</span>,</div>
+            <div>    <span class="string">'Python'</span></div>
+            <div>  <span class="bracket">]</span></div>
+            <div><span class="bracket">}</span>;</div>
+        </div>
+        
+        <!-- Main content (right side) -->
+        <div class="content">
+            <div class="text-section">
+                <div class="tagline">Software Engineer</div>
+                <div class="name">Ulises Lazarte</div>
+                <div class="title">Full Stack Developer</div>
+                <div class="tech-stack">
+                    <div class="tech-tag">TypeScript</div>
+                    <div class="tech-tag">React</div>
+                    <div class="tech-tag">Node.js</div>
+                    <div class="tech-tag">Python</div>
+                    <div class="tech-tag">Automation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Instructions
+        console.log('LinkedIn Cover created!');
+        console.log('To save as image:');
+        console.log('1. Right-click on the cover');
+        console.log('2. Select "Inspect"');
+        console.log('3. Right-click on the .cover-container element');
+        console.log('4. Select "Capture node screenshot"');
+        console.log('Or use browser screenshot tools to capture the exact 1584x396 area');
+    </script>
+</body>
+</html>
