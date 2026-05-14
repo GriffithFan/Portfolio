@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Corto - Ulises Lazarte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 9pt;
+            line-height: 1.4;
+            color: #1f2937;
+            background: #f3f4f6;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            max-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            padding: 12mm 16mm 10mm 16mm;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 7pt;
+            padding-bottom: 6pt;
+            border-bottom: 2pt solid #2563eb;
+        }
+
+        .header-left h1 {
+            font-size: 22pt;
+            font-weight: 800;
+            color: #111827;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .header-left .headline {
+            font-size: 9.5pt;
+            font-weight: 600;
+            color: #2563eb;
+            margin-top: 2pt;
+            letter-spacing: 0.02em;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 8pt;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .header-right a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .header-right strong {
+            color: #1f2937;
+        }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 7pt;
+            margin-bottom: 4pt;
+            padding-bottom: 2pt;
+            border-bottom: 0.75pt solid #dbeafe;
+        }
+
+        /* ===== SUMMARY ===== */
+        .summary {
+            font-size: 8.5pt;
+            color: #374151;
+            line-height: 1.4;
+        }
+
+        .summary strong {
+            color: #111827;
+        }
+
+        /* ===== EXPERIENCE ===== */
+        .job {
+            margin-bottom: 6pt;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1pt;
+        }
+
+        .job-title-text {
+            font-size: 9.5pt;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .job-company {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-size: 8pt;
+            color: #6b7280;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .job-subtitle {
+            font-size: 8pt;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 2pt;
+        }
+
+        .job ul {
+            margin-left: 12pt;
+            margin-bottom: 1pt;
+        }
+
+        .job li {
+            font-size: 8.5pt;
+            margin-bottom: 1pt;
+            color: #374151;
+            line-height: 1.35;
+        }
+
+        .job li strong {
+            color: #111827;
+        }
+
+        .tech-line {
+            font-size: 7.5pt;
+            color: #6b7280;
+            margin-top: 2pt;
+        }
+
+        .tech-line span {
+            background: #f0f4ff;
+            color: #3b63cf;
+            padding: 0.5pt 4pt;
+            border-radius: 2pt;
+            font-weight: 500;
+            font-size: 7pt;
+            margin-right: 2pt;
+            display: inline-block;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4pt 14pt;
+        }
+
+        .skill-group h4 {
+            font-size: 8pt;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 1pt;
+        }
+
+        .skill-group p {
+            font-size: 8pt;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        /* ===== EDUCATION ===== */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2pt 14pt;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .edu-item .edu-name {
+            font-size: 8.5pt;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .edu-item .edu-place {
+            font-size: 8pt;
+            color: #6b7280;
+        }
+
+        .edu-item .edu-date {
+            font-size: 8pt;
+            color: #6b7280;
+            white-space: nowrap;
+        }
+
+        /* ===== ACHIEVEMENTS ===== */
+        .achievements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2pt 14pt;
+        }
+
+        .achievement {
+            font-size: 8.5pt;
+            color: #374151;
+            padding-left: 10pt;
+            position: relative;
+        }
+
+        .achievement::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 7.5pt;
+            color: #9ca3af;
+            margin-top: 6pt;
+            padding-top: 4pt;
+            border-top: 0.5pt solid #e5e7eb;
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { background: white; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                padding: 10mm 14mm 8mm 14mm;
+            }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- ===== HEADER ===== -->
+        <div class="header">
+            <div class="header-left">
+                <h1>ULISES LAZARTE</h1>
+                <div class="headline">Full Stack Developer · React · Node.js · Python · TypeScript</div>
+            </div>
+            <div class="header-right">
+                <strong>Buenos Aires, Argentina</strong><br>
+                <a href="mailto:uisesl380@gmail.com">uisesl380@gmail.com</a> · +54 3965576959<br>
+                <a href="https://github.com/GriffithFan">github.com/GriffithFan</a><br>
+                <a href="https://portfolio-mocha-three-38.vercel.app">portfolio-mocha-three-38.vercel.app</a><br>
+                <a href="https://linkedin.com/in/ulises-lazarte">linkedin.com/in/ulises-lazarte</a>
+            </div>
+        </div>
+
+        <!-- ===== RESUMEN PROFESIONAL ===== -->
+        <div class="section-title">Resumen Profesional</div>
+        <p class="summary">
+            Desarrollador Full Stack con <strong>+2 años de experiencia</strong> construyendo aplicaciones web escalables y sistemas de automatización. 
+            Especializado en <strong>React, Node.js, Python y TypeScript</strong>. Entregué un sistema de gestión empresarial en <strong>16 días</strong>, 
+            vendido a Dinatech S.A. y operativo con <strong>50+ usuarios activos</strong>. 
+            Reducí tiempos de mantenimiento de redes en un <strong>70%</strong> mediante automatización con Python. 
+            Capacidad comprobada para gestionar proyectos end-to-end de forma autónoma con resultados comerciales medibles.
+        </p>
+
+        <!-- ===== EXPERIENCIA ===== -->
+        <div class="section-title">Experiencia Profesional</div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title-text">Full Stack Developer Freelancer</span> · <span class="job-company">Dinatech S.A.</span></div>
+                <span class="job-date">Oct 2025</span>
+            </div>
+            <div class="job-subtitle">Portal Meraki — Sistema de gestión de redes en producción · portalmeraki.info</div>
+            <ul>
+                <li>Diseñé y desarrollé sistema integral de gestión para <strong>50+ técnicos</strong> de mantenimiento de redes escolares en Argentina</li>
+                <li>Implementé arquitectura cliente-servidor con autenticación JWT, PWA con caché offline-first y dashboards en tiempo real</li>
+                <li>Entregué proyecto completo en <strong>16 días</strong> (análisis → producción), vendido a cliente corporativo</li>
+            </ul>
+            <div class="tech-line">
+                <span>React</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>PWA</span><span>JWT</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title-text">Full Stack Developer</span> · <span class="job-company">Kira E-commerce</span></div>
+                <span class="job-date">Dic 2025 – Actualidad</span>
+            </div>
+            <div class="job-subtitle">Plataforma e-commerce completa en producción · tienda-de-ropa-online.vercel.app</div>
+            <ul>
+                <li>Desarrollé plataforma e-commerce con panel administrativo completo, gestión de inventario, carrito y pasarela de pagos</li>
+                <li>Implementé autenticación segura, diseño responsivo mobile-first con animaciones fluidas y deploy CI/CD automatizado</li>
+            </ul>
+            <div class="tech-line">
+                <span>TypeScript</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Vercel</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title-text">Automation Engineer</span> · <span class="job-company">THNet & Cisco</span></div>
+                <span class="job-date">2024 – 2025</span>
+            </div>
+            <div class="job-subtitle">Suite de automatización para infraestructura Cisco Meraki y Salesforce</div>
+            <ul>
+                <li>Construí suite de herramientas CLI que automatizó análisis WAN, tracking de inventario y generación de reportes, ahorrando <strong>+15h semanales</strong></li>
+                <li>Integré Salesforce API para seguimiento de equipos del Ministerio de Educación en proyectos gubernamentales</li>
+            </ul>
+            <div class="tech-line">
+                <span>Python</span><span>Salesforce API</span><span>Cisco Meraki API</span><span>SNMP</span><span>CLI</span>
+            </div>
+        </div>
+
+        <!-- ===== HABILIDADES ===== -->
+        <div class="section-title">Habilidades Técnicas</div>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Frontend</h4>
+                <p>React, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, HTML5/CSS3, Vite</p>
+            </div>
+            <div class="skill-group">
+                <h4>Backend</h4>
+                <p>Node.js, Express, Python, PostgreSQL, Prisma ORM, APIs RESTful, JWT Auth</p>
+            </div>
+            <div class="skill-group">
+                <h4>DevOps & Herramientas</h4>
+                <p>Git/GitHub, Docker, Vercel, VPS Deployment, CI/CD, CLI Development</p>
+            </div>
+            <div class="skill-group">
+                <h4>Automatización & IA</h4>
+                <p>Python Scripting, OpenAI API, Web Scraping, SNMP, Integración APIs externas</p>
+            </div>
+        </div>
+
+        <!-- ===== LOGROS ===== -->
+        <div class="section-title">Logros Clave</div>
+        <div class="achievements">
+            <div class="achievement"><strong>Sistema vendido</strong> a Dinatech S.A. en producción con 50+ usuarios</div>
+            <div class="achievement"><strong>3 aplicaciones</strong> web en producción activa</div>
+            <div class="achievement"><strong>16 días</strong> de desarrollo end-to-end (Portal Meraki)</div>
+            <div class="achievement"><strong>+15h/semana</strong> ahorradas con automatización Python</div>
+        </div>
+
+        <!-- ===== EDUCACIÓN ===== -->
+        <div class="section-title">Educación</div>
+        <div class="edu-grid">
+            <div class="edu-item">
+                <div>
+                    <span class="edu-name">Tecnicatura en Programación</span> · 
+                    <span class="edu-place">UTN</span>
+                </div>
+                <span class="edu-date">2024 – 2025</span>
+            </div>
+            <div class="edu-item">
+                <div>
+                    <span class="edu-name">Ingeniería en Informática</span> · 
+                    <span class="edu-place">UNT</span>
+                </div>
+                <span class="edu-date">2019 – 2022</span>
+            </div>
+            <div class="edu-item">
+                <div>
+                    <span class="edu-name">Técnico Electromecánico</span> · 
+                    <span class="edu-place">Automatización</span>
+                </div>
+                <span class="edu-date">2018</span>
+            </div>
+            <div class="edu-item">
+                <div>
+                    <span class="edu-name">Full Stack & Python</span> · 
+                    <span class="edu-place">MasterMind</span>
+                </div>
+                <span class="edu-date">2024</span>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-info">
+            <span>Español (nativo) · Inglés (avanzado lectura/escritura)</span>
+            <span>Disponibilidad inmediata · Remoto / Híbrido / Presencial (CABA)</span>
+        </div>
+    </div>
+</body>
+</html>

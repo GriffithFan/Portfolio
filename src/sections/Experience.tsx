@@ -14,13 +14,21 @@ const experiences: ExperienceItem[] = [
   {
     id: 1,
     role: "Full Stack Developer",
+    company: "THNET",
+    period: "2024 - Presente",
+    description: "Desarrollo de Carrot, portal web corporativo interno. Sistema full stack con monitoreo de redes Cisco Meraki, gestión de predios, tareas, chat, stock y facturación. Roles diferenciados, JWT, despliegue en VPS con PM2 y Nginx.",
+    technologies: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Meraki API", "JWT", "VPS"]
+  },
+  {
+    id: 2,
+    role: "Full Stack Developer",
     company: "Freelance",
     period: "2024 - Presente",
     description: "Desarrollo de aplicaciones web completas para clientes. Proyectos e-commerce, sistemas de gestión empresarial y automatización de procesos.",
     technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "Python"]
   },
   {
-    id: 2,
+    id: 3,
     role: "Developer & Consultant",
     company: "Portal Meraki",
     period: "2024",
@@ -28,7 +36,7 @@ const experiences: ExperienceItem[] = [
     technologies: ["JavaScript", "React", "Express", "PWA", "VPS"]
   },
   {
-    id: 3,
+    id: 4,
     role: "Network Automation Engineer",
     company: "Proyectos Cisco Meraki",
     period: "2023 - 2024",

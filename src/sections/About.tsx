@@ -41,15 +41,15 @@ const About = () => {
             <p className="text-gray-300 text-lg leading-relaxed">
               Desarrollador <span className="text-primary-400 font-semibold">Full Stack Junior</span> especializado en 
               la integración de <span className="text-primary-400 font-semibold">Inteligencia Artificial</span> en 
-              soluciones web modernas. Experiencia práctica con React, Node.js, Python y herramientas de automatización.
+              soluciones web modernas. Experiencia práctica con React, Node.js, Python, WordPress y herramientas de automatización.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Con <span className="text-primary-400 font-semibold">4 meses de desarrollo activo intensivo</span> y 
+              Con <span className="text-primary-400 font-semibold">1 año de desarrollo activo</span> y 
               3 años de fundamentos en programación, mi enfoque está en crear soluciones escalables y 
               bien documentadas. Capacidad demostrada para transformar requisitos complejos en código funcional.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Portfolio incluye <span className="text-primary-400 font-semibold">3 aplicaciones web en producción</span>, 
+              Portfolio incluye <span className="text-primary-400 font-semibold">4 aplicaciones web en producción</span>, 
               múltiples <span className="text-primary-400 font-semibold">pipelines de automatización</span> y 
               scripts ETL. Comprometido con las mejores prácticas, código limpio y aprendizaje continuo.
             </p>

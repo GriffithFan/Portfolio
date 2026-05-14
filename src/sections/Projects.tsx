@@ -112,6 +112,11 @@ const Projects = () => {
                     </a>
                   )}
                 </div>
+                {project.demoNote && (
+                  <p className="text-xs text-gray-500 mt-3 italic border-t border-gray-700/50 pt-3">
+                    {project.demoNote}
+                  </p>
+                )}
               </div>
             </motion.div>
           ))}

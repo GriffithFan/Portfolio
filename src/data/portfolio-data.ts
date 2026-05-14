@@ -6,6 +6,7 @@ export interface Project {
   tags: string[]
   github?: string
   demo?: string
+  demoNote?: string
 }
 
 export interface Skill {
@@ -18,7 +19,7 @@ export interface Skill {
 export const personalInfo = {
   name: "Ulises Lazarte",
   role: "Full Stack Developer · AI Integration",
-  bio: "Desarrollador Full Stack con enfoque en arquitecturas modernas y soluciones impulsadas por IA. Experiencia construyendo aplicaciones escalables con React, Node.js y Python. Especializado en automatización, CLI tools y optimización de workflows de desarrollo.",
+  bio: "Desarrollador Full Stack con 1 año de experiencia activa, enfocado en arquitecturas modernas y soluciones impulsadas por IA. Experiencia construyendo aplicaciones web, e-commerce y sistemas corporativos con React, Node.js, Python y WordPress. Especializado en automatización, CLI tools y optimización de workflows de desarrollo.",
   email: "uisesl380@gmail.com",
   github: "https://github.com/GriffithFan",
   linkedin: "https://linkedin.com/in/ulises-lazarte",
@@ -47,6 +48,7 @@ export const skills: Skill[] = [
   { name: "VS Code", icon: "SiVisualstudiocode", category: "tools", description: "Extensions, debugging, tasks" },
   { name: "Docker", icon: "SiDocker", category: "tools", description: "Contenedores, compose, images" },
   { name: "Vercel", icon: "SiVercel", category: "tools", description: "Deploy, edge functions, analytics" },
+  { name: "WordPress", icon: "SiWordpress", category: "tools", description: "Temas, plugins, e-commerce, CMS" },
   
   // AI & Automation
   { name: "OpenAI", icon: "SiOpenai", category: "ai", description: "GPT API, prompts, embeddings" },
@@ -90,11 +92,20 @@ export const projects: Project[] = [
     tags: ["Python", "Automation", "Network", "CLI", "Excel", "SNMP"],
     github: "https://github.com/GriffithFan"
   },
+  {
+    id: 5,
+    title: "Carrot · Portal de Monitoreo Meraki",
+    description: "Aplicación web corporativa full stack para THNET. Centraliza monitoreo de redes Cisco Meraki, gestión de predios, sistema de tareas tipo ClickUp, chat interno, stock y facturación en un único panel privado. Roles diferenciados, JWT con cookies HTTP-only, integración API Meraki y demo aislada con base de datos ficticia.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Meraki API", "JWT", "VPS"],
+    demo: "https://carrot.thnet.com.ar/demo-app/login",
+    demoNote: "Login: admin.demo@carrot.local · Demo.Carrot.2026!",
+  },
 ]
 
 export const experience = {
   years: "3 años",
-  activeMonths: "4 meses",
-  projects: "3+",
-  technologies: "15+"
+  activeMonths: "1 año",
+  projects: "4+",
+  technologies: "16+"
 }

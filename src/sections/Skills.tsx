@@ -1,7 +1,7 @@
 import { 
   SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss,
   SiNodedotjs, SiExpress, SiPython, SiPostgresql, SiPrisma, SiPandas,
-  SiGit, SiGithub, SiDocker, SiVercel, SiOpenai
+  SiGit, SiGithub, SiDocker, SiVercel, SiOpenai, SiWordpress
 } from 'react-icons/si'
 import { FiTerminal, FiZap, FiCode } from 'react-icons/fi'
 import { VscVscode } from 'react-icons/vsc'
@@ -14,7 +14,7 @@ import Tooltip from '../components/Tooltip'
 const iconMap: Record<string, IconType> = {
   SiReact, SiTypescript, SiJavascript, SiHtml5, SiCss3, SiTailwindcss,
   SiNodedotjs, SiExpress, SiPython, SiPostgresql, SiPrisma, SiPandas,
-  SiGit, SiGithub, SiDocker, SiVercel, SiOpenai,
+  SiGit, SiGithub, SiDocker, SiVercel, SiOpenai, SiWordpress,
   SiVisualstudiocode: VscVscode,
   FiTerminal, FiZap, FiCode
 }
