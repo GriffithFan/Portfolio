@@ -88,7 +88,7 @@ const Contact = () => {
 
             <div className="space-y-4">
               <motion.a
-                href="mailto:uisesl380@gmail.com"
+                href="mailto:dev@thnet.com.ar"
                 whileHover={{ x: 5 }}
                 className="flex items-center space-x-4 glass-effect p-4 rounded-lg hover:bg-white/10 transition-all duration-300 group"
               >
@@ -97,7 +97,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Email</div>
-                  <div className="text-white">uisesl380@gmail.com</div>
+                  <div className="text-white">dev@thnet.com.ar</div>
                 </div>
               </motion.a>
 
