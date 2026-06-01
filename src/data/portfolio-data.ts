@@ -94,8 +94,8 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    title: "Carrot · Portal de Monitoreo Meraki",
-    description: "Aplicación web corporativa full stack para THNET. Centraliza monitoreo de redes Cisco Meraki, gestión de predios, sistema de tareas tipo ClickUp, chat interno, stock y facturación en un único panel privado. Roles diferenciados, JWT con cookies HTTP-only, integración API Meraki y demo aislada con base de datos ficticia.",
+    title: "Carrot — Plataforma de Gestión Operativa y Monitoreo de Red",
+    description: "Sistema integral para equipos técnicos en campo que unifica gestión de tareas, inventario, monitoreo Meraki, facturación, chat y analíticas en una sola plataforma web self-hosted.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Meraki API", "JWT", "VPS"],
     demo: "https://carrot.thnet.com.ar/demo-app/login",
