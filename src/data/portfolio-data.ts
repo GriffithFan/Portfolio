@@ -20,9 +20,9 @@ export const personalInfo = {
   name: "Ulises Lazarte",
   role: "Full Stack Developer · AI Integration",
   bio: "Desarrollador Full Stack con 1 año de experiencia activa, enfocado en arquitecturas modernas y soluciones impulsadas por IA. Experiencia construyendo aplicaciones web, e-commerce y sistemas corporativos con React, Node.js, Python y WordPress. Especializado en automatización, CLI tools y optimización de workflows de desarrollo.",
-  email: "uisesl380@gmail.com",
+  email: "dev@thnet.com",
   github: "https://github.com/GriffithFan",
-  linkedin: "https://linkedin.com/in/ulises-lazarte",
+  linkedin: "https://www.linkedin.com/in/ulises-lazarte-82a9412ab/",
 }
 
 export const skills: Skill[] = [
