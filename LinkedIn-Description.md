@@ -1,226 +1,205 @@
-# DESCRIPCIÓN PARA LINKEDIN - ULISES LAZARTE
+# Perfil de LinkedIn — Ulises Lazarte
+
+> Revisado el 29/09/2026.
+>
+> **Qué cambió respecto de la versión anterior y por qué.** Antes el perfil se vendía
+> como "Full Stack Developer", que es el casillero donde hay miles y donde nada
+> distingue. Lo que sí distingue es el cruce: alguien que **coordina la operación y
+> además construye el software que la gestiona**. Eso es difícil de copiar.
+>
+> También se sacó toda mención a **Dinatech**: THNET le presta servicios, no hay
+> relación contractual directa. Afirmarla en el perfil es verificable y, si falla, se
+> lleva puesta la credibilidad de todo lo demás. Misma regla para SOFSE, SAIELCO,
+> SERCAE, el Ministerio de Educación y Cisco: **el empleador va con nombre; los
+> clientes se describen por sector.**
 
 ---
 
-## VERSIÓN COMPLETA (Recomendada)
+## Titular (máx. 220 caracteres)
 
-Desarrollador Full Stack especializado en arquitecturas modernas y soluciones escalables. Con experiencia comprobada entregando proyectos comerciales en producción, incluyendo un sistema de gestión empresarial adquirido por Dinatech S.A.
+```
+Coordinador de Operaciones Técnicas en THNET · Desarrollo de sistemas internos y automatización · Redes · Next.js · TypeScript · Python · Técnico electromecánico
+```
 
-Mi stack principal incluye React, Node.js, Python y TypeScript. He trabajado desde aplicaciones e-commerce completas hasta sistemas de gestión empresarial y herramientas de automatización para infraestructura de red.
+Alternativas según hacia dónde se quiera inclinar:
 
-Lo que me diferencia es la capacidad de gestionar proyectos de inicio a fin de forma autónoma, desde el análisis de requerimientos hasta el despliegue en producción. Tengo experiencia tanto en desarrollo de producto como en automatización de procesos técnicos complejos.
+- **Gestión:** `Coordinación de operaciones de campo y cronogramas · Desarrollo de sistemas internos · Automatización de procesos · Redes · Técnico electromecánico`
+- **Desarrollo:** `Desarrollo de sistemas para operaciones de campo · Next.js · TypeScript · PostgreSQL · Python · Coordinación de cuadrillas de redes · Automatización`
 
-Mi formación técnica en electromecánica me aporta una perspectiva única para trabajar en sistemas que requieren integración entre software y hardware, especialmente en entornos de networking y automatización industrial.
-
-Actualmente desarrollo proyectos que integran tecnologías de frontend moderno con backends robustos, bases de datos relacionales y APIs de terceros, siempre buscando soluciones pragmáticas que generen valor real.
-
-Experiencia destacada: Portal Meraki (sistema de gestión de redes escolares con 50+ usuarios activos), Kira E-commerce (plataforma completa con panel admin y pagos), y suite de automatización para gestión de infraestructura Cisco Meraki.
-
-Busco proyectos desafiantes donde pueda aplicar mi experiencia técnica y capacidad de ejecución autónoma para entregar soluciones de calidad.
+Los separadores `·` rinden mejor que `|`: ocupan menos y se leen mejor en celular.
 
 ---
 
-## VERSIÓN CONDENSADA (Alternativa)
+## Acerca de
 
-Desarrollador Full Stack con experiencia entregando proyectos comerciales en producción. Stack: React, Node.js, Python, TypeScript.
+Trabajo en el punto donde se cruzan la operación en campo y el software: en THNET coordino el trabajo de cuadrillas de técnicos de redes y, en paralelo, construyo los sistemas con los que ese trabajo se gestiona.
 
-He desarrollado desde sistemas de gestión empresarial (vendido a Dinatech S.A.) hasta plataformas e-commerce completas y herramientas de automatización para infraestructura de red.
+Empecé en mesa de ayuda dando soporte a instaladores y técnicos de mantenimiento de redes en campo. Ahí aprendí dónde se rompen los procesos de verdad: cronogramas que no llegan, evidencias que se pierden, trabajo hecho que nadie puede facturar porque no quedó registrado. Hoy coordino salidas, planificación y carga de cronogramas para proyectos de conectividad en escuelas de todo el país, y participo en la administración y carga de datos de un proyecto de infraestructura ferroviaria.
 
-Gestiono proyectos de inicio a fin: análisis, desarrollo, despliegue y mantenimiento. Experiencia en arquitecturas cliente-servidor, APIs RESTful, bases de datos relacionales e integración con servicios externos.
+Esa experiencia se volvió software. Desarrollé y mantengo en producción el sistema de gestión de operaciones que usa el equipo todos los días: reparto de trabajo por cuadrilla, seguimiento de estados, evidencias, cronogramas, reportes semanales de facturación, generación automática de actas y tableros de rendimiento. Está construido con Next.js, TypeScript, PostgreSQL y Python, corre en un VPS propio y lo sostengo yo: desde el modelo de datos y los permisos hasta el despliegue, los respaldos y el monitoreo. La empresa terminó comercializándolo a un cliente del sector.
 
-Mi background técnico en electromecánica me permite trabajar eficazmente en sistemas que integran software y hardware, particularmente en entornos de networking y automatización.
+Alrededor de eso hay una constante: automatizar lo repetitivo. Scrapers, integraciones con CRM, generadores de documentos, aplicaciones de escritorio, apps móviles y scripts que le ahorran horas a gente que no debería estar copiando datos a mano.
 
-Proyectos destacados: Portal Meraki (50+ usuarios activos), Kira E-commerce, suite de automatización Cisco Meraki.
+Mi formación es de Técnico Universitario en Mecánica Eléctrica, y eso se nota: entiendo la instalación física, no solo el sistema que la registra. Puedo leer un plano, diseñar una pieza y mandarla a imprimir en 3D, y después escribir el software que la administra.
 
-Busco proyectos donde pueda aportar capacidad técnica y ejecución autónoma.
+Actualmente me estoy formando en Odoo para llevar la gestión comercial al mismo lugar que ya llevé la operativa.
 
----
-
-## VERSIÓN CORTA (Para espacios limitados)
-
-Full Stack Developer con experiencia en proyectos comerciales. React, Node.js, Python, TypeScript. Sistema de gestión vendido a Dinatech S.A., plataforma e-commerce en producción y herramientas de automatización para infraestructura de red. Background técnico en electromecánica aplicado a integración software-hardware.
+> Al pegarlo, dejar **una línea en blanco entre párrafos**. Sin eso LinkedIn lo muestra
+> como un bloque y en celular no se lee.
 
 ---
 
-## TÍTULO DEL PERFIL (Headline)
+## Versión corta
 
-Opciones recomendadas:
-- `Full Stack Developer | React • Node.js • Python | Arquitecturas Escalables`
-- `Full Stack Developer | TypeScript • React • Node.js | Automation & DevOps`
-- `Full Stack Engineer | Modern Web Applications | Sold Commercial Projects`
+Coordino operaciones de técnicos de redes en campo en THNET y desarrollo los sistemas que las gestionan. Vengo de mesa de ayuda para instaladores; hoy planifico salidas y cronogramas para proyectos de conectividad escolar y participo en administración de datos de infraestructura ferroviaria.
 
----
+Construí y mantengo en producción el sistema de gestión que usa el equipo a diario: cronogramas, evidencias, facturación semanal, actas automáticas y tableros. Next.js, TypeScript, PostgreSQL, Python, desplegado y sostenido por mí.
 
-## SKILLS A DESTACAR EN PERFIL
-
-**Frontend:**
-- React.js
-- TypeScript
-- JavaScript (ES6+)
-- Next.js
-- Tailwind CSS
-- HTML5/CSS3
-- Responsive Design
-
-**Backend:**
-- Node.js
-- Express.js
-- Python
-- RESTful APIs
-- PostgreSQL
-- Prisma ORM
-- Authentication (JWT)
-
-**DevOps & Tools:**
-- Git/GitHub
-- Docker
-- Vercel
-- VPS Deployment
-- CI/CD
-- CLI Development
-- VS Code
-
-**Automatización:**
-- Python Scripting
-- Web Scraping
-- API Integration
-- Workflow Automation
-- Network Automation
-
-**Bases de datos:**
-- PostgreSQL
-- Database Design
-- Data Modeling
-
-**Metodologías:**
-- Agile Development
-- Project Management
-- Full Project Lifecycle
-- Autonomous Execution
+Técnico Universitario en Mecánica Eléctrica: entiendo la instalación física, no solo el software que la registra. Ampliando hacia Odoo.
 
 ---
 
-## SECCIÓN DE EXPERIENCIA - FORMATO RECOMENDADO
+## Experiencia — THNET (único empleador)
 
-**Full Stack Developer Freelancer | Dinatech S.A.**  
-Oct 2025 · 1 mes  
-Buenos Aires, Argentina · Remoto
+**Cargo:** `Coordinador de Operaciones Técnicas y Desarrollo Interno`
 
-Desarrollé Portal Meraki, sistema integral de gestión de redes escolares vendido a cliente corporativo y actualmente en producción con 50+ usuarios activos.
+Si el puesto formal sigue siendo Desarrollador, usar
+`Desarrollador · Coordinación de Operaciones Técnicas`: dice lo mismo y no expone si
+alguien lo contrasta.
 
-• Arquitectura completa: React + Node.js + PostgreSQL  
-• Autenticación JWT y PWA con caché optimizado  
-• Dashboards en tiempo real para análisis de red  
-• Desarrollo completo en 16 días de inicio a producción  
+```
+Coordino el trabajo de cuadrillas de técnicos de redes en campo y desarrollo los
+sistemas internos con los que se gestiona.
 
-Stack: JavaScript, React, Node.js, Express, PostgreSQL, PWA, API RESTful
+• Planificación de salidas y carga de cronogramas para proyectos de conectividad
+  en escuelas de todo el país.
+• Desarrollo y mantenimiento del sistema de gestión de operaciones que el equipo
+  usa a diario: estados, evidencias, cronogramas, reportes semanales de
+  facturación, generación automática de actas y tableros de rendimiento.
+  Next.js, TypeScript, PostgreSQL y Python, desplegado en VPS propio.
+  El sistema fue comercializado por la empresa a un cliente del sector.
+• Integraciones con el CRM del cliente y automatización de la carga de datos.
+• Administración y carga de datos para un proyecto de infraestructura ferroviaria.
+• Soporte a instaladores y técnicos de mantenimiento en campo.
+```
 
----
+**Aptitudes de este puesto:** TypeScript, Node.js, JavaScript, React.js, Git, GitHub,
+Docker, Web Services API, Desarrollo de aplicaciones web, Python, PostgreSQL, Next.js,
+Automatización de procesos, Salesforce.com.
 
-**Full Stack Developer | Proyecto Personal**  
-Dic 2025 - Actualidad · 2 meses  
-Remoto
-
-Kira E-commerce: Plataforma de e-commerce completa desarrollada en TypeScript, actualmente en producción.
-
-• Panel administrativo completo (productos, inventario, órdenes)  
-• Sistema de autenticación y gestión de usuarios  
-• Integración de carrito de compras y pasarela de pagos  
-• Diseño responsivo con animaciones fluidas  
-
-Stack: TypeScript, React, Next.js, Tailwind CSS, Vercel
-
----
-
-**Automation Engineer | THNet & Cisco**  
-2024 - 2025 · 1 año  
-Remoto
-
-Suite de automatización Python para gestión de infraestructura Cisco Meraki y tracking de equipos en Salesforce para proyectos educativos del gobierno.
-
-• Herramientas CLI para análisis WAN y gestión de dispositivos  
-• Integración Salesforce para inventario del Ministerio de Educación  
-• Automatización de relevamientos y generación de reportes  
-• Web scraping y consultas SNMP para dashboards  
-
-Stack: Python, Salesforce API, Cisco Meraki API, SNMP, CLI Tools
+**Quitar de este puesto:** AngularJS, React Native, Java, WordPress, AutoCAD, C#.
 
 ---
 
-## PROYECTOS DESTACADOS (Sección Featured)
+## Proyectos (no Experiencia)
 
-Agrega estos proyectos a tu sección Featured en LinkedIn:
+Las tres entradas que estaban como *Autónomo* van acá. En Proyectos no hay empresa ni
+tipo de empleo, así que se muestra el trabajo **sin afirmar una relación laboral**.
 
-1. **Portal Meraki** - https://portalmeraki.info  
-   Sistema de gestión empresarial en producción
+### Sistema de gestión de operaciones
 
-2. **Kira E-commerce** - https://tienda-de-ropa-online.vercel.app  
-   Plataforma e-commerce con TypeScript
+```
+Sistema web de gestión para operaciones de campo en proyectos de conectividad
+escolar, en producción y usado a diario por el equipo técnico. Desarrollado
+dentro de la empresa, que después lo comercializó a un cliente del sector.
 
-3. **GitHub Profile** - https://github.com/GriffithFan  
-   Repositorios de proyectos y automatización
+• Reparto de trabajo por cuadrilla y seguimiento de estados sobre miles de sitios
+• Evidencias, cronogramas y generación automática de actas en Word
+• Reportes semanales de facturación y tableros de rendimiento por técnico
+• Integración con el CRM del cliente para la carga de datos
+• Roles y permisos, auditoría de cambios, notificaciones push y PWA
 
-4. **Portfolio** - https://portfolio-mocha-three-38.vercel.app  
-   Portfolio profesional con proyectos destacados
+Stack: Next.js, TypeScript, PostgreSQL (Prisma), Python, Leaflet. Desplegado en
+VPS con nginx y PM2, incluyendo respaldos y monitoreo.
+```
 
----
+Sin logo de Dinatech, sin "vendido", y **sin "16 días de inicio a producción"**: esa
+frase subvende meses de trabajo real y a alguien técnico le suena a apurado.
 
-## CERTIFICACIONES SUGERIDAS (Para futuro)
+### Automatización de infraestructura de red
 
-- AWS Certified Developer - Associate
-- TypeScript Professional Certification
-- MongoDB Certified Developer
-- Docker Certified Associate
-- Cisco DevNet Associate (por tu background en networking)
+```
+Suite de automatización en Python para gestión de infraestructura de red y
+control de inventario de equipos en proyectos de conectividad educativa.
 
----
+• Herramientas de línea de comandos para análisis WAN y gestión de dispositivos
+• Integración con CRM para inventario y relevamientos
+• Generación automática de reportes
+• Consultas SNMP y scraping para tableros de seguimiento
 
-## HASHTAGS RELEVANTES
+Stack: Python, APIs REST, SNMP, Selenium
+```
 
-`#FullStackDevelopment` `#React` `#NodeJS` `#TypeScript` `#Python`  
-`#WebDevelopment` `#JavaScript` `#Automation` `#DevOps` `#Programming`  
-`#SoftwareEngineering` `#TechCareers` `#OpenToWork`
+### KURO / Kira — E-commerce
 
----
-
-## ESTRATEGIA DE CONTENIDO
-
-**Tipos de posts para tu perfil:**
-
-1. Lecciones técnicas de proyectos reales
-2. Análisis de arquitecturas de software
-3. Tips de automatización y productividad
-4. Experiencias vendiendo proyectos como freelancer
-5. Comparativas de tecnologías (React vs Next.js, etc.)
-
-**Frecuencia recomendada:** 1-2 posts por semana
-
-**Mejores horarios:** Lunes-Jueves, 8-10 AM o 6-8 PM (hora Argentina)
+El texto que ya estaba sirve. Agregarle el link a producción.
 
 ---
 
-## GRUPOS RECOMENDADOS EN LINKEDIN
+## Servicios
 
-- Full Stack Developers Community
-- React Developers Group
-- Node.js Developers
-- Freelance Developers Network
-- Python Developers Community
-- TypeScript Community
-- Web Development
-- DevOps Engineers
+**Recomendación: sacar la sección.** Es para freelancers que buscan clientes; siendo
+empleado full-time, le resta foco al perfil y el empleador la ve.
+
+Si se mantiene:
+
+```
+Desarrollo de sistemas de gestión a medida para empresas con operaciones en
+campo: reparto de trabajo, seguimiento de estados, evidencias, cronogramas y
+reportes. Me ocupo del ciclo completo, del modelo de datos al despliegue y
+mantenimiento.
+
+También automatizo procesos repetitivos: integraciones entre sistemas,
+generación automática de documentación y scripts que eliminan la carga manual
+de datos.
+
+Next.js, TypeScript, PostgreSQL, Python.
+```
+
+Etiquetas: Desarrollo de software personalizado, Desarrollo de aplicaciones en la nube,
+Gestión de la información. **Quitar** Diseño web, Pruebas de software y Desarrollo web.
 
 ---
 
-## CONEXIONES ESTRATÉGICAS
+## Educación
 
-**Conecta con:**
-- Tech recruiters en Argentina/LATAM
-- CTOs y Engineering Managers
-- Otros Full Stack Developers
-- Fundadores de startups
-- Freelance clients potenciales
-- Alumni de tus universidades (UTN, UNT)
+- **Técnico Universitario en Mecánica Eléctrica** — el único título terminado, y el que
+  sostiene el argumento de "entiendo la instalación física". **Tiene que ir primero.**
+- **UTN, Tecnicatura en Programación** — borrar la descripción actual, que dice que no se
+  pudo sostener una ingeniería por el trabajo. Nadie lo iba a preguntar. Reemplazar por:
+  `Formación en fundamentos de programación, bases de datos y desarrollo de software.`
+  Y corregir la fecha de fin si se dejó.
+- **"MASTERMIND COMPUTER HARDWARE ENGINEERING COLLEGE PRIVATE LIMITED"** — ese nombre es
+  de una empresa de la India: se eligió mal en el autocompletado. Corregir.
 
-**Mensaje de conexión sugerido:**
-"Hola [Nombre], vi tu perfil y me interesó tu experiencia en [área]. Soy Full Stack Developer trabajando con React y Node.js. Me gustaría conectar y aprender de tu trayectoria."
+---
+
+## Cómo nombrar la venta del sistema
+
+Resuelto el 29/09/2026: el sistema se **desarrolló dentro de THNET**, y fue **THNET
+quien lo comercializó** a un cliente del sector. Vos no vendiste nada, y el comprador
+no se nombra.
+
+- ✅ "La empresa terminó comercializándolo a un cliente del sector."
+- ✅ "Desarrollado dentro de la empresa, que después lo comercializó."
+- ❌ "Sistema vendido a Dinatech S.A." — falso en las dos mitades: ni lo vendiste vos
+  ni corresponde nombrar al comprador.
+
+Decirlo suma: no es solo "está en producción", es que **tuvo valor comercial
+comprobado**. Y al atribuirle la venta a la empresa queda más creíble, no menos.
+
+Por lo mismo, va como **logro dentro de la experiencia en THNET**, no como trabajo
+freelance.
+
+---
+
+## Pendientes
+
+- Fijar 3 aptitudes principales: Automatización de procesos, TypeScript (o Python),
+  Gestión de operaciones.
+- Sacar del perfil la aptitud **"Tecnología quirúrgica"**.
+- Reasignar *Salesforce.com* e *Implementación de Salesforce.com* a THNET **antes** de
+  borrar la experiencia "Automation Engineer", o quedan huérfanas.
+- Portada nueva: `linkedin-cover.html`, en esta misma carpeta.
+- `CV-Ulises-Lazarte.md` arrastra los mismos problemas (Dinatech, "Full Stack Developer",
+  los 16 días). Falta actualizarlo.

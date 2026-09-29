@@ -1,265 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Cover - Ulises Lazarte</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #1a1a1a;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        
-        .cover-container {
-            width: 1584px;
-            height: 396px;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        /* Grid pattern overlay */
-        .grid-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(100, 116, 139, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(100, 116, 139, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.3;
-        }
-        
-        /* Accent gradient */
-        .accent-gradient {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
-            top: -200px;
-            right: 100px;
-            filter: blur(80px);
-        }
-        
-        .accent-gradient-2 {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
-            bottom: -100px;
-            right: 400px;
-            filter: blur(60px);
-        }
-        
-        /* Main content */
-        .content {
-            position: relative;
-            z-index: 10;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 80px;
-        }
-        
-        .text-section {
-            text-align: right;
-            margin-right: 60px;
-        }
-        
-        .tagline {
-            font-size: 18px;
-            font-weight: 500;
-            color: #60a5fa;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        
-        .name {
-            font-size: 68px;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 8px;
-            letter-spacing: -2px;
-            line-height: 1.1;
-        }
-        
-        .title {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 24px;
-            letter-spacing: 0.5px;
-        }
-        
-        .tech-stack {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-        
-        .tech-tag {
-            background: rgba(59, 130, 246, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 8px 18px;
-            border-radius: 6px;
-            color: #93c5fd;
-            font-size: 15px;
-            font-weight: 600;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        /* Decorative elements */
-        .deco-line {
-            position: absolute;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #60a5fa, transparent);
-            opacity: 0.4;
-        }
-        
-        .deco-line-1 {
-            width: 400px;
-            top: 100px;
-            left: 300px;
-        }
-        
-        .deco-line-2 {
-            width: 300px;
-            bottom: 120px;
-            right: 300px;
-        }
-        
-        /* Code snippet */
-        .code-snippet {
-            position: absolute;
-            left: 80px;
-            top: 60px;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 24px 28px;
-            border-radius: 10px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            font-family: 'Monaco', 'Courier New', monospace;
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.8;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            max-width: 320px;
-        }
-        
-        .code-snippet .keyword {
-            color: #c084fc;
-            font-weight: 600;
-        }
-        
-        .code-snippet .string {
-            color: #6ee7b7;
-        }
-        
-        .code-snippet .property {
-            color: #60a5fa;
-        }
-        
-        .code-snippet .bracket {
-            color: #fbbf24;
-        }
-        
-        /* Geometric shapes */
-        .shape {
-            position: absolute;
-            border-radius: 12px;
-            opacity: 0.05;
-            border: 2px solid rgba(59, 130, 246, 0.3);
-        }
-        
-        .shape-1 {
-            width: 150px;
-            height: 150px;
-            top: 220px;
-            left: 450px;
-            transform: rotate(45deg);
-        }
-        
-        .shape-2 {
-            width: 100px;
-            height: 100px;
-            top: 30px;
-            right: 200px;
-            transform: rotate(30deg);
-            border-radius: 50%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portada LinkedIn — Ulises Lazarte</title>
+<!--
+  Portada de LinkedIn, 1584 x 396 (la medida que pide LinkedIn).
+
+  Dos cosas condicionan el diseño y por eso el texto está donde está:
+
+  1. LA FOTO DE PERFIL TAPA LA ESQUINA INFERIOR IZQUIERDA. En escritorio el avatar
+     se monta sobre unos 400 x 200 px de esa esquina. Ahí no va nada que importe
+     (en la versión anterior caía justo encima del bloque de código).
+  2. EN CELULAR SE RECORTAN LOS COSTADOS. Se ve aproximadamente la franja central,
+     así que el nombre y la bajada viven entre los 520 y los 1320 px.
+
+  El botón "Ver zonas seguras" dibuja las dos guías. Apagalo antes de capturar.
+
+  Para exportar: abrir en el navegador al 100% de zoom y capturar el recuadro.
+-->
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
+    min-height: 100vh; padding: 28px;
+    background: #111418;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    color: #cbd5e1;
+  }
+
+  .portada {
+    width: 1584px; height: 396px; position: relative; overflow: hidden;
+    background:
+      radial-gradient(1100px 420px at 72% 38%, #1d3b63 0%, transparent 62%),
+      linear-gradient(120deg, #0b1220 0%, #101b2e 46%, #16253c 100%);
+    box-shadow: 0 24px 70px rgba(0,0,0,.45);
+  }
+
+  /* Motivo: nodos conectados. Evoca sitios en territorio, y no el típico
+     snippet de código, que además es lo primero que tapa el avatar. */
+  .red { position: absolute; inset: 0; opacity: .5; }
+
+  /* Halo tenue detrás del texto, para que siempre tenga contraste. */
+  .halo {
+    position: absolute; left: 470px; top: 60px; width: 900px; height: 280px;
+    background: radial-gradient(closest-side, rgba(10,16,28,.75), transparent);
+    filter: blur(6px);
+  }
+
+  .texto { position: absolute; left: 560px; top: 104px; width: 800px; }
+
+  .eyebrow {
+    font-size: 15px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase;
+    color: #6ea8e8; margin-bottom: 14px;
+  }
+
+  .nombre {
+    font-size: 62px; font-weight: 800; letter-spacing: -.02em; line-height: 1;
+    color: #fff; margin-bottom: 14px;
+  }
+
+  .bajada { font-size: 23px; font-weight: 500; color: #a9bdd6; margin-bottom: 26px; }
+
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .chip {
+    font-size: 14px; font-weight: 600; color: #bcd4f0;
+    padding: 7px 15px; border-radius: 999px;
+    border: 1px solid rgba(124,164,214,.42);
+    background: rgba(124,164,214,.10);
+  }
+
+  /* Guías: NO forman parte de la imagen final. */
+  .guias { position: absolute; inset: 0; display: none; }
+  body.guias .guias { display: block; }
+  .zona-foto {
+    position: absolute; left: 0; bottom: 0; width: 400px; height: 200px;
+    background: rgba(239,68,68,.20); border: 2px dashed rgba(239,68,68,.75);
+  }
+  .zona-movil {
+    position: absolute; left: 500px; top: 0; width: 840px; height: 100%;
+    background: rgba(34,197,94,.10); border: 2px dashed rgba(34,197,94,.7);
+  }
+  .guias span {
+    position: absolute; font-size: 12px; font-weight: 700; color: #fff;
+    background: rgba(0,0,0,.6); padding: 3px 8px; border-radius: 4px;
+  }
+
+  .barra { display: flex; gap: 10px; align-items: center; }
+  button {
+    font: inherit; font-size: 13px; padding: 9px 16px; border-radius: 8px;
+    border: 1px solid #2c3a4d; background: #16202e; color: #cbd5e1; cursor: pointer;
+  }
+  button:hover { background: #1d2a3c; }
+  .nota { font-size: 12px; color: #64748b; max-width: 1584px; line-height: 1.6; }
+</style>
 </head>
 <body>
-    <div class="cover-container">
-        <!-- Background overlays -->
-        <div class="grid-overlay"></div>
-        <div class="accent-gradient"></div>
-        <div class="accent-gradient-2"></div>
-        
-        <!-- Decorative lines -->
-        <div class="deco-line deco-line-1"></div>
-        <div class="deco-line deco-line-2"></div>
-        
-        <!-- Geometric shapes -->
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        
-        <!-- Code snippet (left side, won't be covered) -->
-        <div class="code-snippet">
-            <div><span class="keyword">const</span> <span class="property">skills</span> <span class="bracket">=</span> <span class="bracket">{</span></div>
-            <div>  frontend: <span class="bracket">[</span></div>
-            <div>    <span class="string">'React'</span>,</div>
-            <div>    <span class="string">'TypeScript'</span>,</div>
-            <div>    <span class="string">'Next.js'</span></div>
-            <div>  <span class="bracket">]</span>,</div>
-            <div>  backend: <span class="bracket">[</span></div>
-            <div>    <span class="string">'Node.js'</span>,</div>
-            <div>    <span class="string">'Python'</span></div>
-            <div>  <span class="bracket">]</span></div>
-            <div><span class="bracket">}</span>;</div>
-        </div>
-        
-        <!-- Main content (right side) -->
-        <div class="content">
-            <div class="text-section">
-                <div class="tagline">Software Engineer</div>
-                <div class="name">Ulises Lazarte</div>
-                <div class="title">Full Stack Developer</div>
-                <div class="tech-stack">
-                    <div class="tech-tag">TypeScript</div>
-                    <div class="tech-tag">React</div>
-                    <div class="tech-tag">Node.js</div>
-                    <div class="tech-tag">Python</div>
-                    <div class="tech-tag">Automation</div>
-                </div>
-            </div>
-        </div>
+
+<div class="portada" id="portada">
+  <svg class="red" viewBox="0 0 1584 396" preserveAspectRatio="none" aria-hidden="true">
+    <g stroke="#4f7fb5" stroke-width="1.1" opacity=".55" fill="none">
+      <path d="M120 300 L210 214 L318 250 L402 150 L300 96"/>
+      <path d="M210 214 L150 120 L300 96"/>
+      <path d="M318 250 L430 306 L520 238"/>
+      <path d="M402 150 L520 238"/>
+      <path d="M1290 96 L1390 160 L1330 268 L1214 296 L1160 200 L1290 96"/>
+      <path d="M1390 160 L1490 250"/>
+      <path d="M1160 200 L1060 250"/>
+    </g>
+    <g fill="#8fbdf0">
+      <circle cx="120" cy="300" r="5"/><circle cx="210" cy="214" r="4"/>
+      <circle cx="318" cy="250" r="4"/><circle cx="402" cy="150" r="5"/>
+      <circle cx="300" cy="96"  r="4"/><circle cx="150" cy="120" r="3.5"/>
+      <circle cx="430" cy="306" r="3.5"/><circle cx="520" cy="238" r="4"/>
+      <circle cx="1290" cy="96" r="4"/><circle cx="1390" cy="160" r="5"/>
+      <circle cx="1330" cy="268" r="4"/><circle cx="1214" cy="296" r="3.5"/>
+      <circle cx="1160" cy="200" r="4"/><circle cx="1490" cy="250" r="3.5"/>
+      <circle cx="1060" cy="250" r="3"/>
+    </g>
+  </svg>
+
+  <div class="halo"></div>
+
+  <div class="texto">
+    <!-- OPCIÓN B (la puesta): una frase que se entiende en dos segundos. -->
+    <div class="eyebrow">Operaciones técnicas · Desarrollo</div>
+    <div class="nombre">Ulises Lazarte</div>
+    <div class="bajada">Automatizo lo que gestiono</div>
+    <div class="chips">
+      <span class="chip">Operaciones de campo</span>
+      <span class="chip">Sistemas internos</span>
+      <span class="chip">Automatización</span>
     </div>
-    
-    <script>
-        // Instructions
-        console.log('LinkedIn Cover created!');
-        console.log('To save as image:');
-        console.log('1. Right-click on the cover');
-        console.log('2. Select "Inspect"');
-        console.log('3. Right-click on the .cover-container element');
-        console.log('4. Select "Capture node screenshot"');
-        console.log('Or use browser screenshot tools to capture the exact 1584x396 area');
-    </script>
+
+    <!-- OPCIÓN A, más explícita. Para usarla, reemplazar la bajada y los chips por:
+           bajada: "Coordino operaciones de campo y construyo los sistemas que las gestionan"
+           chips : Next.js · TypeScript · PostgreSQL · Python · Automatización
+         Con esa bajada conviene bajar .bajada a 20px para que entre en un solo renglón. -->
+  </div>
+
+  <div class="guias">
+    <div class="zona-foto"><span style="left:10px; top:10px">Tapado por la foto de perfil</span></div>
+    <div class="zona-movil"><span style="left:10px; top:10px">Visible en celular</span></div>
+  </div>
+</div>
+
+<div class="barra">
+  <button onclick="document.body.classList.toggle('guias')">Ver zonas seguras</button>
+</div>
+
+<p class="nota">
+  1584 × 396. Capturá el recuadro al 100 % de zoom, con las guías apagadas.
+  Nada importante va en la esquina inferior izquierda (la tapa tu foto) ni fuera de la
+  franja central (se recorta en celular).
+</p>
+
 </body>
 </html>
