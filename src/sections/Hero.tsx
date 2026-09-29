@@ -14,17 +14,20 @@ const Hero = () => {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
           <span className="text-gradient">{personalInfo.name}</span>
         </h1>
 
         {/* Role */}
-        <h2 className="text-2xl md:text-4xl text-gray-300 mb-8 animate-slide-up">
+        <h2 className="text-xl md:text-3xl text-gray-300 mb-3 animate-slide-up leading-snug">
           {personalInfo.role}
         </h2>
+        <p className="text-sm md:text-base text-primary-400 mb-8">
+          {personalInfo.tagline}
+        </p>
 
         {/* Bio */}
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
           {personalInfo.bio}
         </p>
 
@@ -88,7 +91,7 @@ const Hero = () => {
           href="#about"
           className="inline-flex flex-col items-center text-gray-500 hover:text-primary-400 transition-colors animate-float"
         >
-          <span className="text-sm mb-2">Descubre más</span>
+          <span className="text-sm mb-2">Ver más</span>
           <FiArrowDown size={24} />
         </a>
       </div>

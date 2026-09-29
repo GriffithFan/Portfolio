@@ -1,111 +1,143 @@
 export interface Project {
   id: number
   title: string
+  problem: string
   description: string
-  image: string
   tags: string[]
+  status?: string
   github?: string
   demo?: string
-  demoNote?: string
+  note?: string
 }
 
-export interface Skill {
+export interface SkillGroup {
+  title: string
+  items: string[]
+}
+
+export interface PublicRepo {
   name: string
-  icon: string
-  category: 'frontend' | 'backend' | 'tools' | 'ai'
-  description?: string
+  description: string
+  language: string
+  url: string
 }
 
 export const personalInfo = {
   name: "Ulises Lazarte",
-  role: "Full Stack Developer · AI Integration",
-  bio: "Desarrollador Full Stack con 1 año de experiencia activa, enfocado en arquitecturas modernas y soluciones impulsadas por IA. Experiencia construyendo aplicaciones web, e-commerce y sistemas corporativos con React, Node.js, Python y WordPress. Especializado en automatización, CLI tools y optimización de workflows de desarrollo.",
-  email: "dev@thnet.com",
+  role: "Coordinador de Operaciones Técnicas · Desarrollo de sistemas internos y automatización",
+  tagline: "Redes · Next.js · TypeScript · Python · Técnico electromecánico",
+  bio: "Coordino operaciones de técnicos de redes en campo y desarrollo los sistemas que las gestionan. Construí y mantengo en producción el sistema de gestión que usa el equipo a diario: cronogramas, evidencias, facturación semanal, actas automáticas y tableros. Next.js, TypeScript, PostgreSQL, Python. Técnico electromecánico: entiendo la instalación física, no solo el software que la registra.",
+  email: "ulises@thnet.com.ar",
   github: "https://github.com/GriffithFan",
   linkedin: "https://www.linkedin.com/in/ulises-lazarte-82a9412ab/",
 }
 
-export const skills: Skill[] = [
-  // Frontend
-  { name: "React", icon: "SiReact", category: "frontend", description: "Componentes, hooks, context API" },
-  { name: "TypeScript", icon: "SiTypescript", category: "frontend", description: "Tipado estático, interfaces, generics" },
-  { name: "JavaScript", icon: "SiJavascript", category: "frontend", description: "ES6+, async/await, DOM" },
-  { name: "HTML5", icon: "SiHtml5", category: "frontend", description: "Semántica, accesibilidad, SEO" },
-  { name: "CSS3", icon: "SiCss3", category: "frontend", description: "Flexbox, Grid, animaciones" },
-  { name: "Tailwind CSS", icon: "SiTailwindcss", category: "frontend", description: "Utility-first, responsive design" },
-  
-  // Backend
-  { name: "Node.js", icon: "SiNodedotjs", category: "backend", description: "APIs REST, Express, streams" },
-  { name: "Express", icon: "SiExpress", category: "backend", description: "Middleware, routing, auth" },
-  { name: "Python", icon: "SiPython", category: "backend", description: "Scripts, automatización, data" },
-  { name: "PostgreSQL", icon: "SiPostgresql", category: "backend", description: "SQL, relaciones, índices" },
-  { name: "Prisma", icon: "SiPrisma", category: "backend", description: "ORM, migraciones, type-safe" },
-  { name: "Pandas", icon: "SiPandas", category: "backend", description: "DataFrames, ETL, análisis" },
-  
-  // Tools & DevOps
-  { name: "Git", icon: "SiGit", category: "tools", description: "Control de versiones, branching" },
-  { name: "GitHub", icon: "SiGithub", category: "tools", description: "CI/CD, PRs, colaboración" },
-  { name: "VS Code", icon: "SiVisualstudiocode", category: "tools", description: "Extensions, debugging, tasks" },
-  { name: "Docker", icon: "SiDocker", category: "tools", description: "Contenedores, compose, images" },
-  { name: "Vercel", icon: "SiVercel", category: "tools", description: "Deploy, edge functions, analytics" },
-  { name: "WordPress", icon: "SiWordpress", category: "tools", description: "Temas, plugins, e-commerce, CMS" },
-  
-  // AI & Automation
-  { name: "OpenAI", icon: "SiOpenai", category: "ai", description: "GPT API, prompts, embeddings" },
-  { name: "Terminal", icon: "FiTerminal", category: "ai", description: "Bash, PowerShell, scripts CLI" },
-  { name: "Automatización", icon: "FiZap", category: "ai", description: "Workflows, cron, pipelines" },
-  { name: "Web Scraping", icon: "FiCode", category: "ai", description: "Puppeteer, BeautifulSoup, Cheerio" },
+export const about: string[] = [
+  "Trabajo en el punto donde se cruzan la operación en campo y el software: en THNET coordino el trabajo de cuadrillas de técnicos de redes y, en paralelo, construyo los sistemas con los que ese trabajo se gestiona.",
+  "Empecé en mesa de ayuda dando soporte a instaladores y técnicos de mantenimiento de redes en campo. Ahí aprendí dónde se rompen los procesos de verdad: cronogramas que no llegan, evidencias que se pierden, trabajo hecho que nadie puede facturar porque no quedó registrado. Hoy coordino salidas, planificación y carga de cronogramas para proyectos de conectividad en escuelas de todo el país, y participo en la administración y carga de datos de un proyecto de infraestructura ferroviaria.",
+  "Esa experiencia se volvió software. Desarrollé y mantengo en producción el sistema de gestión de operaciones que usa el equipo todos los días: reparto de trabajo por cuadrilla, seguimiento de estados, evidencias, cronogramas, reportes semanales de facturación, generación automática de actas y tableros de rendimiento. Está construido con Next.js, TypeScript, PostgreSQL y Python, corre en un VPS propio y lo sostengo yo: desde el modelo de datos y los permisos hasta el despliegue, los respaldos y el monitoreo. La empresa terminó comercializándolo a un cliente del sector.",
+  "Alrededor de eso hay una constante: automatizar lo repetitivo. Scrapers, integraciones con CRM, generadores de documentos, aplicaciones de escritorio, apps móviles y scripts que le ahorran horas a gente que no debería estar copiando datos a mano.",
+  "Mi formación es de técnico electromecánico, y eso se nota: entiendo la instalación física, no solo el sistema que la registra. Puedo leer un plano, diseñar una pieza y mandarla a imprimir en 3D, y después escribir el software que la administra.",
+  "Actualmente me estoy formando en Odoo para llevar la gestión comercial al mismo lugar que ya llevé la operativa.",
+]
+
+export const skillGroups: SkillGroup[] = [
+  {
+    title: "Gestión de operaciones",
+    items: [
+      "Coordinación de cuadrillas en campo",
+      "Planificación de salidas y cronogramas",
+      "Administración y carga de datos de proyectos",
+      "Soporte a instaladores y técnicos",
+    ],
+  },
+  {
+    title: "Automatización de procesos",
+    items: [
+      "Python",
+      "Scraping (Selenium)",
+      "Integración con CRM",
+      "Generación automática de documentos",
+      "SNMP",
+      "Scripts CLI",
+    ],
+  },
+  {
+    title: "Desarrollo de sistemas",
+    items: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "PWA", "Capacitor (Android)"],
+  },
+  {
+    title: "Infraestructura",
+    items: ["VPS Linux", "nginx", "PM2", "Respaldos y monitoreo", "Git", "Docker"],
+  },
+  {
+    title: "Base técnica",
+    items: ["Técnico electromecánico", "Lectura de planos", "Diseño e impresión 3D"],
+  },
 ]
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Tienda de Ropa Online · E-commerce",
-    description: "Plataforma e-commerce completa con TypeScript. Sistema de gestión de inventario, carrito de compras, procesamiento de pagos y panel administrativo. Desplegada en Vercel con CI/CD automatizado.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
-    tags: ["TypeScript", "React", "Next.js", "Vercel", "E-commerce"],
-    github: "https://github.com/GriffithFan/tienda_de_ropa_online",
-    demo: "https://tienda-de-ropa-online.vercel.app"
+    title: "Sistema de gestión de operaciones de campo",
+    status: "En producción, usado a diario por el equipo",
+    problem: "Cronogramas que no llegan, evidencias que se pierden y trabajo hecho que no se puede facturar porque no quedó registrado.",
+    description: "Sistema web para operaciones de campo en proyectos de conectividad escolar: reparto de trabajo por cuadrilla y seguimiento de estados sobre miles de sitios, evidencias, cronogramas y actas automáticas en Word, reportes semanales de facturación y tableros de rendimiento por técnico. Integración con el CRM del cliente, roles y permisos, auditoría de cambios, notificaciones push y PWA. Desarrollado dentro de THNET, que después lo comercializó a un cliente del sector.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Python", "Leaflet", "nginx", "PM2"],
+    note: "Acceso de demostración a pedido.",
   },
   {
     id: 2,
-    title: "Portal Meraki · Sistema de Gestión",
-    description: "Sistema integral de gestión empresarial con arquitectura frontend/backend. Proyecto vendido y desplegado en VPS. Manejo de dispositivos, autenticación segura, PWA con caché optimizado y dashboards interactivos en producción.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    tags: ["JavaScript", "Node.js", "React", "PWA", "Express"],
-    github: "https://github.com/GriffithFan/portal_meraki_final",
-    demo: "https://portalmeraki.info"
+    title: "Plataforma de operaciones en campo white-label",
+    problem: "Un contratista con técnicos repartidos por el territorio necesita saber cada día quién hace qué, si el trabajo pasa la inspección y qué se puede facturar, y eso suele vivir en planillas sueltas y grupos de chat.",
+    description: "Plataforma para contratistas que instalan y mantienen infraestructura de red: reparte el trabajo entre cuadrillas, sigue el estado de cada sitio, guarda la evidencia de lo hecho y liquida lo facturable. Incluye stock por número de serie, calendario, mapa de cuadrillas, métricas y mesa de ayuda interna. Pensada para revenderse bajo la marca del comprador: nombre, logos y colores salen de un único archivo de configuración, y los módulos opcionales se activan por variable de entorno. Tests unitarios y pruebas en navegador que recorren el flujo diario y verifican el control de acceso.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "JWT", "Leaflet", "Recharts", "nginx", "PM2"],
   },
   {
     id: 3,
-    title: "LoL Statistics · Analytics Platform",
-    description: "Aplicación web para análisis de estadísticas de League of Legends. Integración con API oficial de Riot Games, procesamiento de datos en Python, visualizaciones interactivas y perfiles de jugadores detallados.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
-    tags: ["Python", "JavaScript", "API", "Data Analysis", "Gaming"],
-    github: "https://github.com/GriffithFan/estadisticas_lol"
+    title: "Suite de automatización de infraestructura de red",
+    problem: "El inventario de equipos, los relevamientos y los reportes de la red se mantenían a mano.",
+    description: "Suite de automatización en Python para gestión de infraestructura de red y control de inventario de equipos en proyectos de conectividad educativa. Herramientas de línea de comandos para análisis WAN y gestión de dispositivos, integración con CRM para inventario y relevamientos, generación automática de reportes, consultas SNMP y scraping para tableros de seguimiento.",
+    tags: ["Python", "APIs REST", "SNMP", "Selenium"],
   },
   {
     id: 4,
-    title: "Meraki Automation Suite · Network Tools",
-    description: "Suite completa de scripts Python para automatización de redes Cisco Meraki. Gestión de dispositivos, análisis de velocidad WAN, recolección de relevamientos, consultas SNMP, web scraping de dashboards y reportes automatizados en Excel. Herramientas CLI portables.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-    tags: ["Python", "Automation", "Network", "CLI", "Excel", "SNMP"],
-    github: "https://github.com/GriffithFan"
+    title: "Generador automático de actas",
+    problem: "Las actas de cada trabajo se completaban a mano, una por una.",
+    description: "Genera las actas en Word a partir de los datos de cada caso. Procesa listas de forma secuencial, permite retomar una corrida interrumpida y deja un resumen por caso. Funciona integrado al sistema de gestión y también como ejecutable autónomo para Windows, con interfaz propia.",
+    tags: ["Python", "Selenium", "python-docx", "tkinter", "PyInstaller"],
   },
   {
     id: 5,
-    title: "Carrot — Plataforma de Gestión Operativa y Monitoreo de Red",
-    description: "Sistema integral para equipos técnicos en campo que unifica gestión de tareas, inventario, monitoreo Meraki, facturación, chat y analíticas en una sola plataforma web self-hosted.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Meraki API", "JWT", "VPS"],
-    demo: "https://carrot.thnet.com.ar/demo-app/login",
-    demoNote: "Login: admin.demo@carrot.local · Demo.Carrot.2026!",
+    title: "App móvil de evidencias en campo",
+    problem: "Ordenar y renombrar a mano las fotos de cada trabajo según el formulario que las pide.",
+    description: "App Android para que el técnico cargue las evidencias desde el sitio. Genera un ZIP con las fotos y los PDF nombrados según cada apartado del formulario, listo para entregar.",
+    tags: ["TypeScript", "Capacitor", "Android"],
+  },
+  {
+    id: 6,
+    title: "Tienda online de indumentaria",
+    status: "En producción",
+    problem: "Vender indumentaria online con catálogo, stock y pedidos administrados desde un panel propio.",
+    description: "E-commerce de ropa de estilo alternativo japonés: catálogo, carrito, autenticación de usuarios y pasarela de pagos, con panel administrativo para inventario, productos y órdenes. Diseño mobile-first.",
+    tags: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Vercel"],
+    github: "https://github.com/GriffithFan/tienda_de_ropa_online",
+    demo: "https://tienda-de-ropa-online.vercel.app",
   },
 ]
 
-export const experience = {
-  years: "3 años",
-  activeMonths: "1 año",
-  projects: "4+",
-  technologies: "16+"
-}
+// Elegidos a mano: el código de los sistemas internos es privado.
+export const publicRepos: PublicRepo[] = [
+  {
+    name: "tienda_de_ropa_online",
+    description: "Tienda online de indumentaria, en producción",
+    language: "TypeScript",
+    url: "https://github.com/GriffithFan/tienda_de_ropa_online",
+  },
+  {
+    name: "Portfolio",
+    description: "Este sitio",
+    language: "TypeScript",
+    url: "https://github.com/GriffithFan/Portfolio",
+  },
+]

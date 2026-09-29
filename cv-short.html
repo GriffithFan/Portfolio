@@ -66,6 +66,8 @@
             font-size: 8pt;
             color: #4b5563;
             line-height: 1.6;
+            white-space: nowrap;
+            margin-left: 14pt;
         }
 
         .header-right a {
@@ -272,104 +274,121 @@
         <div class="header">
             <div class="header-left">
                 <h1>ULISES LAZARTE</h1>
-                <div class="headline">Full Stack Developer · React · Node.js · Python · TypeScript</div>
+                <div class="headline">Coordinador de Operaciones Técnicas en THNET · Desarrollo de sistemas internos y automatización</div>
+                <div class="headline" style="color: #4b5563; font-weight: 500;">Redes · Next.js · TypeScript · Python · Técnico electromecánico</div>
             </div>
             <div class="header-right">
                 <strong>Buenos Aires, Argentina</strong><br>
-                <a href="mailto:uisesl380@gmail.com">uisesl380@gmail.com</a> · +54 3965576959<br>
+                <a href="mailto:ulises@thnet.com.ar">ulises@thnet.com.ar</a> · +54 3965576959<br>
                 <a href="https://github.com/GriffithFan">github.com/GriffithFan</a><br>
                 <a href="https://portfolio-mocha-three-38.vercel.app">portfolio-mocha-three-38.vercel.app</a><br>
-                <a href="https://linkedin.com/in/ulises-lazarte">linkedin.com/in/ulises-lazarte</a>
+                <a href="https://www.linkedin.com/in/ulises-lazarte-82a9412ab/">linkedin.com/in/ulises-lazarte-82a9412ab</a>
             </div>
         </div>
 
-        <!-- ===== RESUMEN PROFESIONAL ===== -->
-        <div class="section-title">Resumen Profesional</div>
+        <!-- ===== PERFIL ===== -->
+        <div class="section-title">Perfil</div>
         <p class="summary">
-            Desarrollador Full Stack con <strong>+2 años de experiencia</strong> construyendo aplicaciones web escalables y sistemas de automatización. 
-            Especializado en <strong>React, Node.js, Python y TypeScript</strong>. Entregué un sistema de gestión empresarial en <strong>16 días</strong>, 
-            vendido a Dinatech S.A. y operativo con <strong>50+ usuarios activos</strong>. 
-            Reducí tiempos de mantenimiento de redes en un <strong>70%</strong> mediante automatización con Python. 
-            Capacidad comprobada para gestionar proyectos end-to-end de forma autónoma con resultados comerciales medibles.
+            Coordino operaciones de técnicos de redes en campo en THNET y desarrollo los sistemas que las gestionan.
+            Vengo de mesa de ayuda para instaladores; hoy planifico salidas y cronogramas para proyectos de conectividad escolar
+            y participo en administración de datos de infraestructura ferroviaria.
+            Construí y mantengo en producción el sistema de gestión que usa el equipo a diario: cronogramas, evidencias,
+            facturación semanal, actas automáticas y tableros. <strong>Next.js, TypeScript, PostgreSQL, Python</strong>, desplegado y sostenido por mí.
+            Técnico electromecánico: entiendo la instalación física, no solo el software que la registra.
         </p>
 
         <!-- ===== EXPERIENCIA ===== -->
-        <div class="section-title">Experiencia Profesional</div>
+        <div class="section-title">Experiencia</div>
 
         <div class="job">
             <div class="job-header">
-                <div><span class="job-title-text">Full Stack Developer Freelancer</span> · <span class="job-company">Dinatech S.A.</span></div>
-                <span class="job-date">Oct 2025</span>
+                <div><span class="job-title-text">Desarrollador · Coordinación de Operaciones Técnicas</span> · <span class="job-company">THNET</span></div>
+                <span class="job-date">Nov 2024 – Actualidad</span>
             </div>
-            <div class="job-subtitle">Portal Meraki — Sistema de gestión de redes en producción · portalmeraki.info</div>
             <ul>
-                <li>Diseñé y desarrollé sistema integral de gestión para <strong>50+ técnicos</strong> de mantenimiento de redes escolares en Argentina</li>
-                <li>Implementé arquitectura cliente-servidor con autenticación JWT, PWA con caché offline-first y dashboards en tiempo real</li>
-                <li>Entregué proyecto completo en <strong>16 días</strong> (análisis → producción), vendido a cliente corporativo</li>
+                <li>Planificación de salidas y carga de cronogramas para proyectos de conectividad en escuelas de todo el país.</li>
+                <li>Desarrollo y mantenimiento del <strong>sistema de gestión de operaciones</strong> que el equipo usa a diario: estados, evidencias, cronogramas, reportes semanales de facturación, actas automáticas y tableros de rendimiento. Desplegado en VPS propio. <strong>El sistema fue comercializado por la empresa a un cliente del sector.</strong></li>
+                <li>Integraciones con el CRM del cliente y automatización de la carga de datos.</li>
+                <li>Administración y carga de datos para un proyecto de infraestructura ferroviaria.</li>
+                <li>Soporte a instaladores y técnicos de mantenimiento en campo.</li>
             </ul>
             <div class="tech-line">
-                <span>React</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>PWA</span><span>JWT</span>
+                <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>Python</span><span>nginx</span><span>PM2</span>
+            </div>
+        </div>
+
+        <!-- ===== PROYECTOS ===== -->
+        <div class="section-title">Proyectos</div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title-text">Plataforma de operaciones en campo white-label</span></div>
+            </div>
+            <ul>
+                <li>Para contratistas de infraestructura de red: reparte trabajo entre cuadrillas, sigue cada sitio, guarda la evidencia y liquida lo facturable. Revendible bajo la marca del comprador.</li>
+            </ul>
+            <div class="tech-line">
+                <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>JWT</span><span>Leaflet</span>
             </div>
         </div>
 
         <div class="job">
             <div class="job-header">
-                <div><span class="job-title-text">Full Stack Developer</span> · <span class="job-company">Kira E-commerce</span></div>
-                <span class="job-date">Dic 2025 – Actualidad</span>
+                <div><span class="job-title-text">Suite de automatización de infraestructura de red</span></div>
             </div>
-            <div class="job-subtitle">Plataforma e-commerce completa en producción · tienda-de-ropa-online.vercel.app</div>
             <ul>
-                <li>Desarrollé plataforma e-commerce con panel administrativo completo, gestión de inventario, carrito y pasarela de pagos</li>
-                <li>Implementé autenticación segura, diseño responsivo mobile-first con animaciones fluidas y deploy CI/CD automatizado</li>
+                <li>Herramientas CLI para análisis WAN, gestión de dispositivos e inventario; integración con CRM, consultas SNMP, scraping y reportes automáticos.</li>
             </ul>
             <div class="tech-line">
-                <span>TypeScript</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Vercel</span>
+                <span>Python</span><span>APIs REST</span><span>SNMP</span><span>Selenium</span>
             </div>
         </div>
 
         <div class="job">
             <div class="job-header">
-                <div><span class="job-title-text">Automation Engineer</span> · <span class="job-company">THNet & Cisco</span></div>
-                <span class="job-date">2024 – 2025</span>
+                <div><span class="job-title-text">Generador automático de actas</span> · <span class="job-company">App móvil de evidencias en campo</span></div>
             </div>
-            <div class="job-subtitle">Suite de automatización para infraestructura Cisco Meraki y Salesforce</div>
             <ul>
-                <li>Construí suite de herramientas CLI que automatizó análisis WAN, tracking de inventario y generación de reportes, ahorrando <strong>+15h semanales</strong></li>
-                <li>Integré Salesforce API para seguimiento de equipos del Ministerio de Educación en proyectos gubernamentales</li>
+                <li>Actas en Word generadas desde los datos de cada caso, con reanudación de corridas y resumen por caso; integrado al sistema y como .exe autónomo para Windows.</li>
+                <li>App Android que genera un ZIP con las fotos y PDF del trabajo nombrados según cada apartado del formulario.</li>
             </ul>
             <div class="tech-line">
-                <span>Python</span><span>Salesforce API</span><span>Cisco Meraki API</span><span>SNMP</span><span>CLI</span>
+                <span>Python</span><span>python-docx</span><span>tkinter</span><span>PyInstaller</span><span>Capacitor</span><span>Android</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div><span class="job-title-text">Tienda online de indumentaria</span></div>
+                <span class="job-date">En producción · tienda-de-ropa-online.vercel.app</span>
+            </div>
+            <ul>
+                <li>Catálogo, carrito, autenticación y pasarela de pagos, con panel administrativo de inventario, productos y órdenes.</li>
+            </ul>
+            <div class="tech-line">
+                <span>TypeScript</span><span>Next.js</span><span>Tailwind CSS</span><span>Vercel</span>
             </div>
         </div>
 
         <!-- ===== HABILIDADES ===== -->
-        <div class="section-title">Habilidades Técnicas</div>
+        <div class="section-title">Habilidades</div>
         <div class="skills-grid">
             <div class="skill-group">
-                <h4>Frontend</h4>
-                <p>React, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, HTML5/CSS3, Vite</p>
+                <h4>Gestión de operaciones</h4>
+                <p>Coordinación de cuadrillas en campo, planificación de salidas y cronogramas, administración de datos de proyectos</p>
             </div>
             <div class="skill-group">
-                <h4>Backend</h4>
-                <p>Node.js, Express, Python, PostgreSQL, Prisma ORM, APIs RESTful, JWT Auth</p>
+                <h4>Automatización de procesos</h4>
+                <p>Python, scraping (Selenium), integración con CRM, generación automática de documentos, SNMP</p>
             </div>
             <div class="skill-group">
-                <h4>DevOps & Herramientas</h4>
-                <p>Git/GitHub, Docker, Vercel, VPS Deployment, CI/CD, CLI Development</p>
+                <h4>Desarrollo de sistemas</h4>
+                <p>Next.js, React, TypeScript, Node.js, PostgreSQL, Prisma, PWA, Capacitor</p>
             </div>
             <div class="skill-group">
-                <h4>Automatización & IA</h4>
-                <p>Python Scripting, OpenAI API, Web Scraping, SNMP, Integración APIs externas</p>
+                <h4>Infraestructura</h4>
+                <p>VPS Linux, nginx, PM2, respaldos y monitoreo, Git, Docker</p>
             </div>
-        </div>
-
-        <!-- ===== LOGROS ===== -->
-        <div class="section-title">Logros Clave</div>
-        <div class="achievements">
-            <div class="achievement"><strong>Sistema vendido</strong> a Dinatech S.A. en producción con 50+ usuarios</div>
-            <div class="achievement"><strong>3 aplicaciones</strong> web en producción activa</div>
-            <div class="achievement"><strong>16 días</strong> de desarrollo end-to-end (Portal Meraki)</div>
-            <div class="achievement"><strong>+15h/semana</strong> ahorradas con automatización Python</div>
         </div>
 
         <!-- ===== EDUCACIÓN ===== -->
@@ -377,29 +396,15 @@
         <div class="edu-grid">
             <div class="edu-item">
                 <div>
-                    <span class="edu-name">Tecnicatura en Programación</span> · 
-                    <span class="edu-place">UTN</span>
-                </div>
-                <span class="edu-date">2024 – 2025</span>
-            </div>
-            <div class="edu-item">
-                <div>
-                    <span class="edu-name">Ingeniería en Informática</span> · 
-                    <span class="edu-place">UNT</span>
-                </div>
-                <span class="edu-date">2019 – 2022</span>
-            </div>
-            <div class="edu-item">
-                <div>
-                    <span class="edu-name">Técnico Electromecánico</span> · 
+                    <span class="edu-name">Técnico Electromecánico</span> ·
                     <span class="edu-place">Automatización</span>
                 </div>
                 <span class="edu-date">2018</span>
             </div>
             <div class="edu-item">
                 <div>
-                    <span class="edu-name">Full Stack & Python</span> · 
-                    <span class="edu-place">MasterMind</span>
+                    <span class="edu-name">Full Stack &amp; Python</span> ·
+                    <span class="edu-place">Mastermind — Nate Gentile</span>
                 </div>
                 <span class="edu-date">2024</span>
             </div>
@@ -408,7 +413,7 @@
         <!-- ===== FOOTER ===== -->
         <div class="footer-info">
             <span>Español (nativo) · Inglés (avanzado lectura/escritura)</span>
-            <span>Disponibilidad inmediata · Remoto / Híbrido / Presencial (CABA)</span>
+            <span>Buenos Aires (CABA)</span>
         </div>
     </div>
 </body>

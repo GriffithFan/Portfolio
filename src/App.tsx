@@ -7,9 +7,9 @@ import Footer from './components/Footer'
 
 // Lazy load sections below the fold for better initial load performance
 const About = lazy(() => import('./sections/About'))
-const Skills = lazy(() => import('./sections/Skills'))
-const Experience = lazy(() => import('./sections/Experience'))
 const Projects = lazy(() => import('./sections/Projects'))
+const Experience = lazy(() => import('./sections/Experience'))
+const Skills = lazy(() => import('./sections/Skills'))
 const Contact = lazy(() => import('./sections/Contact'))
 
 // Loading fallback component
@@ -41,13 +41,13 @@ function App() {
             <About />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
-            <Skills />
+            <Projects />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Experience />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
-            <Projects />
+            <Skills />
           </Suspense>
           <Suspense fallback={<SectionLoader />}>
             <Contact />

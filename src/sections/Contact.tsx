@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi'
 import emailjs from '@emailjs/browser'
+import { personalInfo } from '../data/portfolio-data'
 
 const EMAILJS_SERVICE_ID = 'service_fekb7so'
 const EMAILJS_TEMPLATE_ID = 'template_f6cokdq'
@@ -60,10 +61,10 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            Contáctame
+            Contacto
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente? Hablemos.
+            ¿Querés conversar? Escribime.
           </p>
         </motion.div>
 
@@ -81,14 +82,14 @@ const Contact = () => {
                 Conectemos
               </h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Estoy abierto a oportunidades de colaboración, proyectos freelance 
-                y conversaciones sobre desarrollo web y tecnología.
+                Me interesa conversar sobre operaciones en campo, sistemas de gestión
+                y automatización de procesos.
               </p>
             </div>
 
             <div className="space-y-4">
               <motion.a
-                href="mailto:dev@thnet.com.ar"
+                href={`mailto:${personalInfo.email}`}
                 whileHover={{ x: 5 }}
                 className="flex items-center space-x-4 glass-effect p-4 rounded-lg hover:bg-white/10 transition-all duration-300 group"
               >
@@ -97,12 +98,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-gray-500">Email</div>
-                  <div className="text-white">dev@thnet.com.ar</div>
+                  <div className="text-white break-all">{personalInfo.email}</div>
                 </div>
               </motion.a>
 
               <motion.a
-                href="https://github.com/GriffithFan"
+                href={personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 5 }}
@@ -179,7 +180,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
-                    placeholder="Cuéntame sobre tu proyecto..."
+                    placeholder="Tu mensaje..."
                   />
                 </div>
               </div>

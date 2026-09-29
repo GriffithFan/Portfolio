@@ -29,13 +29,13 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            Proyectos Destacados
+            Proyectos
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Aplicaciones web y herramientas que he desarrollado y desplegado en producción
+            Qué problema resuelve cada uno, qué hace y con qué está hecho
           </p>
         </motion.div>
 
@@ -45,103 +45,78 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 gap-6 md:gap-8"
         >
           {projects.map((project) => (
-            <motion.div
+            <motion.article
               key={project.id}
               variants={cardVariants}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass-effect rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-shadow duration-300 group"
+              className="glass-effect rounded-lg p-5 md:p-6 flex flex-col hover:shadow-xl hover:shadow-primary-500/20 transition-shadow duration-300"
             >
-              {/* Project Image */}
-              <div className="relative h-48 overflow-hidden bg-gray-800">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+              {project.status && (
+                <span className="self-start mb-3 px-2.5 py-0.5 text-xs font-medium bg-green-500/15 text-green-400 rounded-full border border-green-500/30">
+                  {project.status}
+                </span>
+              )}
+
+              <h3 className="text-xl font-bold text-white mb-3">
+                {project.title}
+              </h3>
+
+              <p className="text-primary-400 font-medium mb-3">
+                {project.problem}
+              </p>
+
+              <p className="text-gray-400 mb-5 leading-relaxed">
+                {project.description}
+              </p>
+
+              {/* Stack */}
+              <div className="flex flex-wrap gap-2 mt-auto mb-4">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 text-xs font-medium bg-primary-500/10 text-primary-400 rounded-full border border-primary-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
 
-              {/* Project Info */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 text-xs bg-primary-500/20 text-primary-300 rounded-full border border-primary-500/30"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Links */}
-                <div className="flex space-x-4">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-400 hover:text-primary-400 transition-colors"
-                    >
-                      <FiGithub size={20} />
-                      <span className="text-sm">Código</span>
-                    </a>
-                  )}
+              {/* Links */}
+              {(project.github || project.demo) && (
+                <div className="flex space-x-5">
                   {project.demo && (
                     <a
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-400 hover:text-primary-400 transition-colors"
+                      className="flex items-center space-x-2 text-gray-400 hover:text-primary-400 transition-colors py-1"
                     >
                       <FiExternalLink size={20} />
-                      <span className="text-sm">Demo</span>
+                      <span className="text-sm">Ver en producción</span>
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-400 hover:text-primary-400 transition-colors py-1"
+                    >
+                      <FiGithub size={20} />
+                      <span className="text-sm">Código</span>
                     </a>
                   )}
                 </div>
-                {project.demoNote && (
-                  <p className="text-xs text-gray-500 mt-3 italic border-t border-gray-700/50 pt-3">
-                    {project.demoNote}
-                  </p>
-                )}
-              </div>
-            </motion.div>
+              )}
+              {project.note && (
+                <p className="text-xs text-gray-500 italic border-t border-gray-700/50 pt-3">
+                  {project.note}
+                </p>
+              )}
+            </motion.article>
           ))}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-center mt-12"
-        >
-          <p className="text-gray-400 mb-6">
-            Explora más proyectos en mi repositorio
-          </p>
-          <a
-            href="https://github.com/GriffithFan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-6 py-3 glass-effect text-gray-200 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-          >
-            <FiGithub size={20} />
-            <span>Ver todos en GitHub</span>
-          </a>
         </motion.div>
       </div>
     </section>

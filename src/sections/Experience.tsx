@@ -6,42 +6,26 @@ interface ExperienceItem {
   role: string
   company: string
   period: string
-  description: string
+  summary: string
+  highlights: string[]
   technologies: string[]
 }
 
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    role: "Full Stack Developer",
+    role: "Desarrollador · Coordinación de Operaciones Técnicas",
     company: "THNET",
-    period: "2024 - Presente",
-    description: "Desarrollo de Carrot, portal web corporativo interno. Sistema full stack con monitoreo de redes Cisco Meraki, gestión de predios, tareas, chat, stock y facturación. Roles diferenciados, JWT, despliegue en VPS con PM2 y Nginx.",
-    technologies: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Meraki API", "JWT", "VPS"]
-  },
-  {
-    id: 2,
-    role: "Full Stack Developer",
-    company: "Freelance",
-    period: "2024 - Presente",
-    description: "Desarrollo de aplicaciones web completas para clientes. Proyectos e-commerce, sistemas de gestión empresarial y automatización de procesos.",
-    technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "Python"]
-  },
-  {
-    id: 3,
-    role: "Developer & Consultant",
-    company: "Portal Meraki",
-    period: "2024",
-    description: "Desarrollo y venta de sistema de gestión integral. Arquitectura frontend/backend, PWA, despliegue en VPS con CI/CD.",
-    technologies: ["JavaScript", "React", "Express", "PWA", "VPS"]
-  },
-  {
-    id: 4,
-    role: "Network Automation Engineer",
-    company: "Proyectos Cisco Meraki",
-    period: "2023 - 2024",
-    description: "Suite de herramientas CLI para automatización de redes. Web scraping, análisis SNMP, generación de reportes automatizados.",
-    technologies: ["Python", "SNMP", "Automation", "Excel", "CLI"]
+    period: "Nov 2024 - Presente",
+    summary: "Coordino el trabajo de cuadrillas de técnicos de redes en campo y desarrollo los sistemas internos con los que se gestiona.",
+    highlights: [
+      "Planificación de salidas y carga de cronogramas para proyectos de conectividad en escuelas de todo el país.",
+      "Desarrollo y mantenimiento del sistema de gestión de operaciones que el equipo usa a diario: estados, evidencias, cronogramas, reportes semanales de facturación, generación automática de actas y tableros de rendimiento. Next.js, TypeScript, PostgreSQL y Python, desplegado en VPS propio. El sistema fue comercializado por la empresa a un cliente del sector.",
+      "Integraciones con el CRM del cliente y automatización de la carga de datos.",
+      "Administración y carga de datos para un proyecto de infraestructura ferroviaria.",
+      "Soporte a instaladores y técnicos de mantenimiento en campo.",
+    ],
+    technologies: ["Gestión de operaciones", "Automatización de procesos", "Next.js", "TypeScript", "PostgreSQL", "Python"]
   }
 ]
 
@@ -79,7 +63,7 @@ export default function Experience() {
             <span className="text-gradient">Experiencia</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Mi trayectoria profesional en desarrollo de software
+            Operación en campo y desarrollo interno
           </p>
         </motion.div>
 
@@ -102,11 +86,11 @@ export default function Experience() {
               {/* Timeline dot */}
               <div className="absolute left-6 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-gray-900 hidden md:block" />
 
-              <div className="glass-effect rounded-xl p-6 hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300">
+              <div className="glass-effect rounded-xl p-5 md:p-6 hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-100 flex items-center gap-2">
-                      <FiBriefcase className="text-primary-400" />
+                    <h3 className="text-lg md:text-xl font-bold text-gray-100 flex items-start gap-2">
+                      <FiBriefcase className="text-primary-400 mt-1 flex-shrink-0" />
                       {exp.role}
                     </h3>
                     <p className="text-primary-400 font-medium">{exp.company}</p>
@@ -117,7 +101,13 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <p className="text-gray-300 mb-4">{exp.description}</p>
+                <p className="text-gray-300 mb-4">{exp.summary}</p>
+
+                <ul className="space-y-2 mb-5 list-disc pl-5 marker:text-primary-400">
+                  {exp.highlights.map((item) => (
+                    <li key={item} className="text-gray-400 leading-relaxed">{item}</li>
+                  ))}
+                </ul>
 
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech) => (
