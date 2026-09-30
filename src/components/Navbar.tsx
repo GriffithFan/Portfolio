@@ -1,84 +1,77 @@
-import { useState } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
+import { useEffect, useState } from 'react'
 import ThemeToggle from './ThemeToggle'
+import { personalInfo } from '../data/portfolio-data'
 
-interface NavbarProps {
-  scrolled: boolean
-}
+const navItems = [
+  { name: 'Sobre mí', href: '#about' },
+  { name: 'Proyectos', href: '#projects' },
+  { name: 'Experiencia', href: '#experience' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contacto', href: '#contact' },
+]
 
-const Navbar = ({ scrolled }: NavbarProps) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const navItems = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Sobre mí', href: '#about' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Experiencia', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contacto', href: '#contact' },
-  ]
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
+    <header
+      className={`sticky top-0 z-50 bg-paper border-b transition-colors ${
+        scrolled || isOpen ? 'border-line' : 'border-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <a
-            href="#hero"
-            className="text-2xl font-bold text-gradient hover:scale-105 transition-transform"
-          >
-            {'<Dev />'}
-          </a>
+      <nav className="max-w-page mx-auto px-5 md:px-8 h-14 flex items-center justify-between">
+        <a href="#top" className="font-serif text-lg leading-none hover:text-accent transition-colors">
+          {personalInfo.name}
+        </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-primary-400 transition-colors duration-200 font-medium dark:text-gray-300 dark:hover:text-primary-400"
-              >
-                {item.name}
-              </a>
-            ))}
-            <ThemeToggle />
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-primary-400 transition-colors"
-            >
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-            </button>
-          </div>
+        <div className="hidden md:flex items-center gap-7 text-sm text-muted">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className="hover:text-ink transition-colors">
+              {item.name}
+            </a>
+          ))}
+          <ThemeToggle />
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="font-mono text-xs text-muted px-2 py-2"
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+          >
+            {isOpen ? 'Cerrar' : 'Menú'}
+          </button>
+        </div>
+      </nav>
+
       {isOpen && (
-        <div className="md:hidden glass-effect border-t border-white/10">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div id="mobile-menu" className="md:hidden border-t border-line">
+          <ul className="max-w-page mx-auto px-5 py-2">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-gray-300 hover:text-primary-400 hover:bg-white/5 rounded-md transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </a>
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-3 border-b border-line last:border-0 text-ink"
+                >
+                  {item.name}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
-    </nav>
+    </header>
   )
 }
 

@@ -6,8 +6,21 @@
     <title>CV Corto - Ulises Lazarte</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
     <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        :root {
+            --ink: #161614;
+            --muted: #585752;
+            --faint: #84837D;
+            --line: #DEDCD5;
+            --accent: #C2410C;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,256 +28,240 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 9pt;
-            line-height: 1.4;
-            color: #1f2937;
-            background: #f3f4f6;
-            text-rendering: optimizeLegibility;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.38;
+            color: var(--ink);
+            background: #EDECE8;
             -webkit-font-smoothing: antialiased;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
         .page {
             width: 210mm;
-            min-height: 297mm;
-            max-height: 297mm;
+            height: 297mm;
             margin: 20px auto;
             background: white;
-            padding: 12mm 16mm 10mm 16mm;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 11mm 16mm 9mm;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== Encabezado ===== */
         .header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 7pt;
-            padding-bottom: 6pt;
-            border-bottom: 2pt solid #2563eb;
+            align-items: flex-end;
+            gap: 10mm;
+            padding-bottom: 4mm;
+            border-bottom: 0.75pt solid var(--ink);
         }
 
         .header-left h1 {
-            font-size: 22pt;
-            font-weight: 800;
-            color: #111827;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
+            font-family: 'Newsreader', Georgia, serif;
+            font-weight: 400;
+            font-size: 26pt;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 2.5mm;
         }
 
         .header-left .headline {
-            font-size: 9.5pt;
-            font-weight: 600;
-            color: #2563eb;
-            margin-top: 2pt;
-            letter-spacing: 0.02em;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 11pt;
+            line-height: 1.3;
+        }
+
+        .header-left .headline + .headline {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 7.5pt;
+            color: var(--faint);
+            margin-top: 1.5mm;
         }
 
         .header-right {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 7.3pt;
+            line-height: 1.65;
+            color: var(--muted);
             text-align: right;
-            font-size: 8pt;
-            color: #4b5563;
-            line-height: 1.6;
             white-space: nowrap;
-            margin-left: 14pt;
-        }
-
-        .header-right a {
-            color: #2563eb;
-            text-decoration: none;
         }
 
         .header-right strong {
-            color: #1f2937;
+            font-weight: 400;
         }
 
-        /* ===== SECTION TITLES ===== */
+        .header-right a {
+            color: var(--ink);
+        }
+
+        /* ===== Títulos de sección ===== */
         .section-title {
-            font-size: 8.5pt;
-            font-weight: 700;
-            color: #2563eb;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 7pt;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-top: 7pt;
-            margin-bottom: 4pt;
-            padding-bottom: 2pt;
-            border-bottom: 0.75pt solid #dbeafe;
+            color: var(--faint);
+            margin-top: 3.5mm;
+            margin-bottom: 1.5mm;
         }
 
-        /* ===== SUMMARY ===== */
         .summary {
-            font-size: 8.5pt;
-            color: #374151;
-            line-height: 1.4;
+            color: var(--muted);
         }
 
         .summary strong {
-            color: #111827;
+            font-weight: 400;
+            color: var(--ink);
         }
 
-        /* ===== EXPERIENCE ===== */
+        /* ===== Experiencia y proyectos ===== */
         .job {
-            margin-bottom: 6pt;
+            padding: 1.6mm 0;
+            border-top: 0.5pt solid var(--line);
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 1pt;
+            gap: 6mm;
+            margin-bottom: 0.8mm;
         }
 
         .job-title-text {
-            font-size: 9.5pt;
-            font-weight: 700;
-            color: #111827;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 10.5pt;
         }
 
         .job-company {
-            color: #2563eb;
-            font-weight: 600;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 10.5pt;
+            color: var(--muted);
         }
 
         .job-date {
-            font-size: 8pt;
-            color: #6b7280;
-            font-weight: 500;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 7pt;
+            color: var(--faint);
             white-space: nowrap;
         }
 
         .job-subtitle {
-            font-size: 8pt;
-            color: #6b7280;
-            font-style: italic;
-            margin-bottom: 2pt;
+            color: var(--muted);
+            margin-bottom: 1mm;
         }
 
         .job ul {
-            margin-left: 12pt;
-            margin-bottom: 1pt;
+            list-style: none;
         }
 
         .job li {
-            font-size: 8.5pt;
-            margin-bottom: 1pt;
-            color: #374151;
-            line-height: 1.35;
+            position: relative;
+            padding-left: 3.5mm;
+            color: var(--muted);
+            margin-bottom: 0.5mm;
+        }
+
+        .job li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: var(--faint);
         }
 
         .job li strong {
-            color: #111827;
+            font-weight: 400;
+            color: var(--ink);
         }
 
         .tech-line {
-            font-size: 7.5pt;
-            color: #6b7280;
-            margin-top: 2pt;
-        }
-
-        .tech-line span {
-            background: #f0f4ff;
-            color: #3b63cf;
-            padding: 0.5pt 4pt;
-            border-radius: 2pt;
-            font-weight: 500;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 7pt;
-            margin-right: 2pt;
-            display: inline-block;
+            color: var(--ink);
+            margin-top: 1mm;
         }
 
-        /* ===== SKILLS ===== */
+        .tech-line span:not(:last-child)::after {
+            content: " · ";
+            color: var(--faint);
+        }
+
+        /* ===== Habilidades ===== */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4pt 14pt;
+            gap: 2mm 8mm;
+            border-top: 0.5pt solid var(--line);
+            padding-top: 2mm;
         }
 
         .skill-group h4 {
-            font-size: 8pt;
-            font-weight: 700;
-            color: #374151;
-            margin-bottom: 1pt;
+            font-weight: 500;
+            font-size: 8.5pt;
         }
 
         .skill-group p {
-            font-size: 8pt;
-            color: #4b5563;
-            line-height: 1.4;
+            color: var(--muted);
         }
 
-        /* ===== EDUCATION ===== */
+        /* ===== Educación ===== */
         .edu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2pt 14pt;
+            gap: 1mm 8mm;
+            border-top: 0.5pt solid var(--line);
+            padding-top: 2mm;
         }
 
         .edu-item {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            gap: 4mm;
         }
 
         .edu-item .edu-name {
-            font-size: 8.5pt;
-            font-weight: 600;
-            color: #1f2937;
+            font-weight: 500;
         }
 
         .edu-item .edu-place {
-            font-size: 8pt;
-            color: #6b7280;
+            color: var(--muted);
         }
 
         .edu-item .edu-date {
-            font-size: 8pt;
-            color: #6b7280;
-            white-space: nowrap;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 7pt;
+            color: var(--faint);
         }
 
-        /* ===== ACHIEVEMENTS ===== */
-        .achievements {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2pt 14pt;
-        }
-
-        .achievement {
-            font-size: 8.5pt;
-            color: #374151;
-            padding-left: 10pt;
-            position: relative;
-        }
-
-        .achievement::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #2563eb;
-            font-weight: 700;
-        }
-
-        /* ===== FOOTER ===== */
+        /* ===== Pie ===== */
         .footer-info {
             display: flex;
             justify-content: space-between;
-            font-size: 7.5pt;
-            color: #9ca3af;
-            margin-top: 6pt;
-            padding-top: 4pt;
-            border-top: 0.5pt solid #e5e7eb;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 7pt;
+            color: var(--faint);
+            margin-top: auto;
+            padding-top: 2.5mm;
+            border-top: 0.5pt solid var(--line);
         }
 
-        /* ===== PRINT ===== */
         @media print {
-            body { background: white; }
+            body {
+                background: white;
+            }
             .page {
                 margin: 0;
-                box-shadow: none;
-                padding: 10mm 14mm 8mm 14mm;
             }
-            .no-print { display: none; }
         }
     </style>
 </head>
@@ -273,9 +270,9 @@
         <!-- ===== HEADER ===== -->
         <div class="header">
             <div class="header-left">
-                <h1>ULISES LAZARTE</h1>
+                <h1>Ulises Lazarte</h1>
                 <div class="headline">Coordinador de Operaciones Técnicas en THNET · Desarrollo de sistemas internos y automatización</div>
-                <div class="headline" style="color: #4b5563; font-weight: 500;">Redes · Next.js · TypeScript · Python · Técnico electromecánico</div>
+                <div class="headline">Redes · Next.js · TypeScript · Python · Técnico electromecánico</div>
             </div>
             <div class="header-right">
                 <strong>Buenos Aires, Argentina</strong><br>

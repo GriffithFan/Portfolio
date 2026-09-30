@@ -1,29 +1,16 @@
 import { FiSun, FiMoon } from 'react-icons/fi'
-import { motion } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <motion.button
+    <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg glass-effect hover:bg-white/10 transition-colors"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="p-2 text-muted hover:text-ink transition-colors"
+      aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
     >
-      <motion.div
-        initial={false}
-        animate={{ rotate: theme === 'dark' ? 0 : 180 }}
-        transition={{ duration: 0.3 }}
-      >
-        {theme === 'dark' ? (
-          <FiSun className="w-5 h-5 text-yellow-400" />
-        ) : (
-          <FiMoon className="w-5 h-5 text-primary-400" />
-        )}
-      </motion.div>
-    </motion.button>
+      {theme === 'dark' ? <FiSun size={16} /> : <FiMoon size={16} />}
+    </button>
   )
 }

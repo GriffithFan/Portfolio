@@ -3,171 +3,59 @@
 @tailwind utilities;
 
 @layer base {
-  /* Dark mode (default) */
+  /* Colores como canales RGB para que Tailwind pueda aplicar opacidad */
   :root {
-    --bg-primary: #030712;
-    --bg-secondary: #111827;
-    --text-primary: #f3f4f6;
-    --text-secondary: #9ca3af;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --card-bg: rgba(255, 255, 255, 0.05);
+    --paper: 246 245 241;
+    --ink: 22 22 20;
+    --muted: 88 87 82;
+    --faint: 132 131 125;
+    --line: 222 220 213;
+    --accent: 194 65 12;
+    color-scheme: light;
   }
 
-  /* Light mode */
-  .light {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --glass-bg: #ffffff;
-    --glass-border: rgba(0, 0, 0, 0.12);
-    --card-bg: #ffffff;
-  }
-
-  body {
-    @apply text-gray-100;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .light body,
-  .light {
-    @apply text-gray-900;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  .dark {
+    --paper: 17 17 16;
+    --ink: 236 235 231;
+    --muted: 166 165 158;
+    --faint: 118 117 111;
+    --line: 44 44 41;
+    --accent: 242 140 69;
+    color-scheme: dark;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: "kern" 1;
+  }
+
+  ::selection {
+    @apply bg-accent text-paper;
+  }
+
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
 @layer components {
-  /* Light mode overrides for sections */
-  .light .glass-effect {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  .link {
+    @apply underline decoration-line underline-offset-4 transition-colors hover:text-accent hover:decoration-accent;
   }
 
-  .light .bg-gradient-to-br {
-    background: linear-gradient(to bottom right, #f8fafc, #ffffff, #f1f5f9);
-  }
-
-  .light .from-gray-950,
-  .light .via-gray-900,
-  .light .to-gray-950 {
-    --tw-gradient-from: #f8fafc;
-    --tw-gradient-via: #ffffff;
-    --tw-gradient-to: #f1f5f9;
-  }
-
-  /* Text colors for light mode */
-  .light .text-white {
-    color: #0f172a;
-  }
-
-  .light .text-gray-100 {
-    color: #0f172a;
-  }
-
-  .light .text-gray-200 {
-    color: #1e293b;
-  }
-
-  .light .text-gray-300 {
-    color: #334155;
-  }
-
-  .light .text-gray-400 {
-    color: #64748b;
-  }
-
-  /* Background colors for light mode */
-  .light .bg-gray-800 {
-    background-color: #f1f5f9;
-  }
-
-  .light .bg-gray-900 {
-    background-color: #f8fafc;
-  }
-
-  .light .bg-gray-900\/30 {
-    background-color: rgba(241, 245, 249, 0.8);
-  }
-
-  .light .bg-gray-950 {
-    background-color: #ffffff;
-  }
-
-  /* Border colors */
-  .light .border-white\/10 {
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .light .border-white\/20 {
-    border-color: rgba(0, 0, 0, 0.15);
-  }
-
-  .light .border-gray-800 {
-    border-color: #e2e8f0;
-  }
-
-  /* Background opacity overrides */
-  .light .bg-white\/5 {
-    background-color: rgba(15, 23, 42, 0.03);
-  }
-
-  .light .bg-white\/10 {
-    background-color: rgba(15, 23, 42, 0.06);
-  }
-
-  .light .hover\:bg-white\/10:hover {
-    background-color: rgba(15, 23, 42, 0.08);
-  }
-
-  /* Primary color adjustments for better contrast in light mode */
-  .light .text-primary-400 {
-    color: #0284c7;
-  }
-
-  .light .bg-primary-500\/10 {
-    background-color: rgba(2, 132, 199, 0.1);
-  }
-
-  .light .border-primary-500\/20 {
-    border-color: rgba(2, 132, 199, 0.25);
-  }
-
-  /* Card and section specific fixes */
-  .light .hover\:shadow-primary-500\/30:hover {
-    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.2);
-  }
-
-  .light .hover\:shadow-primary-500\/20:hover {
-    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
-  }
-
-  .light .hover\:shadow-primary-500\/10:hover {
-    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.1);
-  }
-
-  /* Gradient overlays for images */
-  .light .from-gray-900 {
-    --tw-gradient-from: rgba(15, 23, 42, 0.8);
-  }
-}
-
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
-  }
-  
-  .glass-effect {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
+  .label {
+    @apply font-mono text-xs text-faint;
   }
 }

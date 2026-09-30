@@ -5,17 +5,14 @@
 - [x] **CV Profesional en PDF** - Botón de descarga implementado (regenerar desde `cv-generator.html`)
 - [ ] **Capturas reales de proyectos** - Sin fotos de stock; solo capturas propias y sin datos reales
 - [x] **EmailJS integrado** - Formulario de contacto funcional
-- [x] **Animaciones con Framer Motion** - Cards de proyectos y transiciones
-- [ ] **Imagen para compartir** - `index.html` apunta a `/og-image.png`, que no existe en `public/`
+- [x] **Imagen para compartir** - `public/og-image.png` (1200×630)
 
 ## Mejoras de Diseño
 
 - [x] **Dark/Light Mode Toggle** - Cambio de tema con persistencia
-- [x] **Scroll Progress Bar** - Barra de progreso superior
-- [x] **Página 404 Custom** - Manejo de errores elegante
-- [x] **Loading States** - Skeleton loaders y spinners
+- [x] **Página 404** - `public/404.html`, mismo estilo que el sitio
 - [x] **Móvil primero** - Textos, tarjetas y skills revisados para celular
-- [x] **Micro-interacciones** - Hover en tarjetas y enlaces
+- [x] **Estilo editorial** - Newsreader + IBM Plex, un solo acento, sin animaciones ni efectos de plantilla
 
 ## Contenido
 
@@ -30,7 +27,7 @@
 - [x] **Schema.org markup** - SEO estructurado con JSON-LD
 - [ ] **Google Analytics** - Tracking de visitas (requiere cuenta)
 - [x] **Optimización de imágenes** - Lazy loading implementado
-- [x] **Code Splitting** - Secciones con carga diferida
+- [x] **Bundle liviano** - Sin framer-motion; ~170 kB de JS
 - [x] **Tree Shaking** - Importaciones optimizadas de iconos
 
 ## Features Avanzados

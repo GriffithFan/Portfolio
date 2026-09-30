@@ -23,8 +23,6 @@ export default defineConfig({
         manualChunks: {
           // Core React libraries
           'vendor-react': ['react', 'react-dom'],
-          // Animation library
-          'vendor-motion': ['framer-motion'],
           // Icons library (large)
           'vendor-icons': ['react-icons'],
           // Email service
