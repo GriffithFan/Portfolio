@@ -1,4 +1,4 @@
-import React from 'react'
+import 'react'
 
 declare module 'react' {
   interface CSSProperties {
